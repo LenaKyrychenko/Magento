@@ -3,6 +3,124 @@
 //  _____________________________________________
 
 & when (@media-common = true) {
+    .banners{
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 90px;
+    }
+
+    .banners img{
+        width: 610px;
+    }
+
+    .desc{
+        position: absolute;
+        display: flex;
+        left: 500px;
+        top: 400px;
+    }
+
+    .desc h2{
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-size: 26px;
+        font-weight: 600;
+        margin: 0px;
+        padding-bottom: 5px;
+    }
+
+    .new{
+        font-weight: 300;
+    }
+
+    .desc p{
+        font-weight: 300;
+        font-style: italic;
+        color: #888;
+        padding-bottom: 12px;
+
+    }
+
+    .desc a{
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        text-decoration: none;
+        cursor: pointer;
+        color: black;
+    }
+
+    .blockdesc{
+        width: 260px;
+        padding-right: 370px;
+    }
+
+    .underline{
+        padding-bottom: 3px;
+        transition: all 0.5s ease;
+        width: 88px;
+    }
+
+    .underline:hover{
+        border-bottom: 1px black solid;
+    }
+
+    .top-of-block{
+        padding-bottom: 30px;
+    }
+
+    h2{
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        font-weight: 600;
+        margin: 0px;
+        padding-bottom: 5px;
+    }
+
+    .top-of-block p{
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        font-size: 14px;
+        font-weight: 300;
+        color: #888;
+        margin: 0px;
+    }
+
+    .line-with-buttons{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .line-gor{
+        width: 30px;
+        border-bottom: 3px black solid;
+    }
+
+    .owl-buttons{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .owl-prev{
+        margin-right: 10px;
+        margin-top: 2px;
+    }
+
+    .owl-next{
+        margin-left: 10px;
+        margin-top: 2px;
+    }
+
+    .line-ver{
+        height: 25px;
+        width: 1.5px;
+        background-color: black;
+    }
+
+    .owl-prev p, .owl-next p{
+        color: black;
+        font-size: 12px;
+        cursor: pointer;
+    }
 
 }
 
@@ -11,5 +129,7 @@
 //  _____________________________________________
 
 .media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+
+
 
 }
