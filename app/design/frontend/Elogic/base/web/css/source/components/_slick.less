@@ -8,8 +8,8 @@
 
 @icon-pagebuilder-caret-up__content: '\f104';
 @icon-pagebuilder-caret-down__content: '\f101';
-@icon-pagebuilder-caret-next__content: @icon-next;
-@icon-pagebuilder-caret-prev__content: @icon-prev;
+@icon-pagebuilder-caret-next__content: '\e624';
+@icon-pagebuilder-caret-prev__content: '\e625';
 
 //
 //  Slick slider styles
@@ -30,6 +30,7 @@
         touch-action: pan-y;
         user-select: none;
     }
+
     .slick-list {
         display: block;
         margin: 0;
@@ -69,17 +70,21 @@
             visibility: hidden;
         }
     }
+
     .slick-slide {
         display: none;
         float: left;
         height: 100%;
         min-height: 1px;
+
         [dir='rtl'] & {
             float: right;
         }
+
         img {
             display: block;
         }
+
         &.slick-loading img {
             display: none;
         }
@@ -118,14 +123,17 @@
 
     .slick-prev {
         left: 2rem;
+
         &:before {
             content: @icon-pagebuilder-caret-prev__content;
             padding-right: 5px;
         }
     }
 
+
     .slick-next {
         right: 2rem;
+
         &:before {
             content: @icon-pagebuilder-caret-next__content;
             padding-left: 5px;
@@ -160,9 +168,11 @@
         &:hover {
             background: rgba(252, 252, 252, 1);
             border: none;
+
             &.slick-disabled {
                 opacity: .2;
             }
+
             &:before {
                 color: @color-gray-darken4;
             }
@@ -197,6 +207,7 @@
         padding: 15px 0;
         text-align: center;
         width: 100%;
+
         li {
             cursor: pointer;
             display: inline-block;
@@ -206,6 +217,7 @@
             position: relative;
             vertical-align: middle;
             width: 14px;
+
             button {
                 background: @color-white;
                 border: 1px solid @color-gray80;
