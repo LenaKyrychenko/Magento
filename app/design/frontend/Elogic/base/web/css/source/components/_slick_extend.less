@@ -4,12 +4,14 @@
 
 & when (@media-common = true) {
     .slick-prev {
+        left: 1221px;
         &:before {
             display: none;
         }
     }
 
     .slick-next {
+        right: -14px;
         &:before {
             display: none;
         }
@@ -18,5 +20,24 @@
     .slick-prev,
     .slick-next {
         .lib-font-size(12);
+        color: @color-elogic-black1;
+        top: -62px;
+        font-weight: 300;
+        text-transform: uppercase;
+        letter-spacing: 1px;
     }
+
+    .slick-prev:not(.primary),
+    .slick-next:not(.primary) {
+        background: none;
+    }
+
+    .slick-prev:hover,
+    .slick-next:hover
+    {
+        background: none;
+        color: @color-elogic-black1;
+
+    }
+
 }

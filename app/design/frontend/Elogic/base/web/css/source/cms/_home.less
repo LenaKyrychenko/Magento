@@ -10,6 +10,29 @@
         font-weight: 600;
         margin: 0px;
         padding-bottom: 5px;
+        .lib-font-size(24);
+    }
+
+    p{
+        font-weight: 300;
+        color: @color-elogic-grey1;
+        padding-bottom: 12px;
+        margin: 0px;
+        letter-spacing: 1px;
+    }
+
+    .underline{
+        text-transform: uppercase;
+        letter-spacing: 1.3px;
+        text-decoration: @link__text-decoration;
+        cursor: pointer;
+        color: @link__color;
+        padding-bottom: 4.5px;
+        height: 20px;
+    }
+
+    .underline:hover{
+        border-bottom: 1px @color-elogic-black1 solid;
     }
 
     .banners{
@@ -30,7 +53,7 @@
 
     .descr h2{
         letter-spacing: 2px;
-        font-size: 26px;
+        .lib-font-size(26);
     }
 
     .new{
@@ -38,23 +61,8 @@
     }
 
     .descr p{
-        font-weight: 300;
         font-style: italic;
-        color: #888;
-        padding-bottom: 12px;
-    }
-
-    .underline a{
-        text-transform: uppercase;
-        letter-spacing: 2px;
-        text-decoration: none;
-        cursor: pointer;
-        color: black;
-        padding-bottom: 8px;
-    }
-
-    .underline a:hover{
-        border-bottom: 1px black solid;
+        letter-spacing: 0px;
     }
 
     .top-of-block{
@@ -63,48 +71,51 @@
 
     .top-of-block p{
         text-transform: uppercase;
-        letter-spacing: 1px;
-        font-size: 14px;
-        font-weight: 300;
-        color: #888;
-        margin: 0px;
     }
 
-    .line-with-buttons{
+    .lines{
         display: flex;
         justify-content: space-between;
     }
 
     .line-gor{
         width: 30px;
-        border-bottom: 3px black solid;
+        border-bottom: 3px @color-elogic-black1 solid;
     }
 
     .line-ver{
         height: 25px;
         width: 1.5px;
-        background-color: black;
+        background-color: @color-elogic-black1;
+        margin-right: 42px;
+        margin-top: -10px;
     }
 
-    .owl-buttons{
+    .sale-text-with-link{
         display: flex;
         justify-content: space-between;
+        margin-top: -110px;
     }
 
-    .owl-prev{
-        margin-right: 10px;
-        margin-top: 2px;
+    .sale-text{
+        margin-left: 111px;
+        padding-top: 8.9px;
     }
 
-    .owl-next{
-        margin-left: 10px;
-        margin-top: 2px;
+    .sale-text h2{
+        letter-spacing: 0.5px;
+        padding-bottom: 0px;
     }
 
-    .owl-prev p, .owl-next p{
-        color: black;
-        font-size: 12px;
-        cursor: pointer;
+    .sale-text p{
+        text-transform: uppercase;
+        color: @color-elogic-black1;
+        letter-spacing: 0.25px;
+    }
+
+    .nov-sale .underline{
+        margin-right: 112px;
+        padding-top: 17px;
     }
 }
 

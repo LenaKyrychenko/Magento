@@ -34,6 +34,8 @@ use Magento\Framework\App\Action\Action;
                 <ol class="product-items <?= /* @noEscape */ $type ?>" data-mage-init='{"elogicCoarousel":{}}'>
                     <?php $iterator = 1; ?>
                     <?php foreach ($items as $_item) : ?>
+
+
                         <?= /* @noEscape */ ($iterator++ == 1) ? '<li class="product-item">' : '</li><li class="product-item">' ?>
                         <div class="product-item-info">
                             <a href="<?= $block->escapeUrl($block->getProductUrl($_item)) ?>" class="product-item-photo">
@@ -103,6 +105,7 @@ use Magento\Framework\App\Action\Action;
                             </div>
                         </div>
                         <?= ($iterator == count($items) + 1) ? '</li>' : '' ?>
+
                     <?php endforeach ?>
                 </ol>
             </div>
