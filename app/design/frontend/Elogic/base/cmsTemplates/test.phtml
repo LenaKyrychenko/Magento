@@ -1,0 +1,73 @@
+//
+//  first display
+//  _____________________________________________
+
+<div id="top-home-slider" class="first-display">
+    <div class="home1">
+        <img src="{{media url="wysiwyg/banners/home3-1.jpg"}}" alt="">
+        <div class="descr">
+            <h2><span class="new">New</span> Lights</h2>
+            <p>The 1958 moulded plywood armchair by Norman Cherner</p>
+        </div>
+        <a class="underline" href="#">View now</a>
+    </div>
+    <div class="home2"><img src="{{media url="wysiwyg/banners/home3-2.jpg"}}" alt="">
+        <div class="descr">
+            <h2><span class="new">New</span> Lights</h2>
+            <p>The 1958 moulded plywood armchair by Norman Cherner</p>
+        </div>
+        <a class="underline" href="#">View now</a></div>
+</div>
+
+//
+//  banners
+//  _____________________________________________
+
+<div class="banners">
+    <div class="blockdesc">
+        <img src="{{media url="wysiwyg/banners/banner-home3-1.jpg"}}" alt="clocks">
+        <div class="descr">
+            <h2>Clocks</h2>
+            <p>The 1958 moulded plywood armchair by Norman Cherner</p>
+            <a class="underline" href="#">View now</a>
+        </div>
+    </div>
+    <div class="blockdesc">
+        <img src="{{media url="wysiwyg/banners/banner-home3-2.jpg"}}" alt="lights">
+        <div class="descr">
+            <h2><span class="new">New</span> Lights</h2>
+            <p>The 1958 moulded plywood armchair by Norman Cherner</p>
+            <a class="underline" href="#">View now</a>
+        </div>
+    </div>
+</div>
+
+//
+//  productList
+//  _____________________________________________
+
+<div class="top-of-block">
+    <h2>Our Products</h2>
+    <p>Most trendy furniture</p>
+    <div class="lines">
+        <div class="line-gor">&nbsp;</div>
+        <div class="line-ver">&nbsp;</div>
+    </div>
+</div>
+<p>{{widget type="Magento\CatalogWidget\Block\Product\ProductsList" show_pager="0" products_count="10" template="Magento_CatalogWidget::product/widget/content/grid.phtml" conditions_encoded="^[`1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Combine`,`aggregator`:`all`,`value`:`1`,`new_child`:``^],`1--1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Product`,`attribute`:`category_ids`,`operator`:`==`,`value`:`9`^]^]"}}</p>
+
+//
+//  novemberSale
+//  _____________________________________________
+
+<div class="nov-sale">
+    <img src="{{media url="wysiwyg/banners/banner-home3-3.jpg"}}" alt="">
+    <div class="sale-text-with-link">
+        <div class="sale-text">
+            <h2>November Sale</h2>
+            <p>Free Shipping over $125 For International Orders</p>
+        </div>
+        <a class="underline" href="#">Shop Now</a>
+    </div>
+</div>
+
