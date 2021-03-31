@@ -5,15 +5,14 @@ define([
 ], function ($, events){
     'use strict';
 
-    $.widget('elogic.firstDisplaySlider', {
+    $.widget('elogic.newsAndBlogSlider', {
         options:{
             slickOptions:{
                 infinite: true,
-                slidesToShow: 1,
-                slidesToScroll: 1,
+                slidesToShow: 3,
+                slidesToScroll: 2,
                 prevArrow: '<button class="slick-prev" aria-label="Prev" type="button">Prev</button>',
-                nextArrow: '<button class="slick-next" aria-label="Next" type="button">Next</button>',
-                dots: true
+                nextArrow: '<button class="slick-next" aria-label="Next" type="button">Next</button>'
             }
         },
 
@@ -25,5 +24,5 @@ define([
         }
     });
 
-    return $.elogic.firstDisplaySlider;
+    return $.elogic.newsAndBlogSlider;
 });

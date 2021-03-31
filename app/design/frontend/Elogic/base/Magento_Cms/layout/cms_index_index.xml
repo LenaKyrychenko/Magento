@@ -1,14 +1,32 @@
 <?xml version="1.0"?>
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <body>
+        <referenceContainer name="content">
+            <block class="Magento\Framework\View\Element\Template" name="top.slider" template="Magento_Theme::firstDisplay.phtml"/>
+            <block class="Magento\Framework\View\Element\Template" name="home.products.slider" template="Magento_Cms::carousel.phtml"/>
+            <block class="Magento\Framework\View\Element\Template" name="triple.slider" template="Magento_Theme::tripleSlider.phtml"/>
+            <block class="Magento\Framework\View\Element\Template" name="news.blog.slider" template="Magento_Theme::newsAndBlogSlider.phtml"/>
+            <block class="Magento\Framework\View\Element\Template" name="brands.slider" template="Magento_Theme::brandsSlider.phtml"/>
+        </referenceContainer>
+
         <referenceContainer name="page.wrapper">
             <container name="full-columns" htmlTag="div" htmlClass="full-columns" before="main.content">
                 <container name="full-main" label="Custom Main Content Container" htmlTag="div" htmlClass="column main"/>
+            </container>
+
+            <container name="subscribe-columns" htmlTag="div" htmlClass="subscribe-columns" after="main.content">
+                <container name="subscribe-main" label="Subscribe Main Content Container" htmlTag="div" htmlClass="subscribe main"/>
             </container>
         </referenceContainer>
 
         <referenceContainer name="full-main">
             <container name="slider" label="Slider Content Container" htmlTag="div" htmlClass="slider-block" />
+        </referenceContainer>
+
+        <referenceContainer name="subscribe-main">
+            <container name="subscribe.form.container" label="Subscribe Form Container" htmlTag="div" htmlClass="subscribe-form-container">
+                <block class="Magento\Newsletter\Block\Subscribe" name="home.form.subscribe" as="subscribe" after="-" template="Magento_Newsletter::subscribe.phtml" ifconfig="newsletter/general/active"/>
+            </container>
         </referenceContainer>
 
     </body>

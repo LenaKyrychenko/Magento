@@ -4,8 +4,11 @@ var config = {
     ],
     paths: {
         slick:        'js/slick',
-        'elogicCoarousel': 'js/carousels',
-        'elogicFirstSlider': 'js/firstDisplaySlider'
+        'elogicCoarousel': 'Elogic_CatalogWidget/js/carousels',
+        'elogicFirstSlider': 'js/firstDisplaySlider',
+        'elogicTripleSlider': 'js/triple-slider',
+        'elogicNewsBlogSlider': 'js/news-blog-slider',
+        'elogicBrandsSlider': 'js/brands-slider'
     },
     shim: {
         slick: {

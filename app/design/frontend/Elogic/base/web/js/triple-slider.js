@@ -5,7 +5,7 @@ define([
 ], function ($, events){
     'use strict';
 
-    $.widget('elogic.firstDisplaySlider', {
+    $.widget('elogic.tripleSlider', {
         options:{
             slickOptions:{
                 infinite: true,
