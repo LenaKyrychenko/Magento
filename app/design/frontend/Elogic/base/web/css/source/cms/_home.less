@@ -290,25 +290,28 @@
 .media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
 
     .subscribe-columns {
+        .lib-vendor-prefix-display();
+        justify-content: center;
         background-color: @color-elogic-grey2;
         height: 127px;
 
         .subscribe-form-container {
             .lib-vendor-prefix-display();
-            justify-content: space-around;
+            justify-content: space-between;
             align-items: center;
             margin-top: 30px;
+            width: 1350px;
 
-            .keep-update-text{
+            .keep-update-text {
 
                 margin-right: 60px;
 
-                h2{
+                h2 {
                     font-size: 30px;
                     letter-spacing: 2px;
                 }
 
-                p{
+                p {
                     letter-spacing: 0;
                 }
             }
@@ -316,6 +319,201 @@
     }
 
 
+    .footer-content {
+
+        .lib-vendor-prefix-display();
+        flex-direction: column;
+
+
+
+        ul{
+            padding: 0;
+        }
+
+
+        .footer-top {
+            .lib-vendor-prefix-display();
+            justify-content: center;
+
+            .footer-container {
+                .lib-vendor-prefix-display();
+                justify-content: space-between;
+                height: 389px;
+                align-items: center;
+                width: 1350px;
+
+                li {
+                    list-style-type: none;
+                    list-style-position: inside;
+                    margin: 0;
+                    padding-bottom: 15px;
+
+                    a{
+                        color: @color-elogic-grey1;
+                        letter-spacing: .25px;
+                        .lib-css(font-weight, @font-weight__light);
+                    }
+
+                    &:hover{
+                        list-style-type: disc;
+
+                        a{
+                            color: @color-elogic-black2;
+                        }
+                    }
+
+                    &::marker{
+                        //transition: all .4s ease 0s;
+                        color: @color-elogic-grey1;
+                    }
+                }
+
+                h2 {
+                    .lib-font-size(16);
+                    .lib-css(font-weight, @font-weight__heavier);
+                    margin-bottom: 40px;
+
+                    a {
+                        color: @color-elogic-black2;
+                        .lib-css(font-weight, @font-weight__heavier);
+                    }
+                }
+
+                .footer-links-item{
+                    height: 262px;
+                    width: 300px;
+                }
+            }
+        }
+
+        .footer-bottom {
+            border-top: 1px @color-elogic-white2 solid;
+            .lib-vendor-prefix-display();
+            justify-content: center;
+            height: 79px;
+
+            .footer-container {
+
+                .lib-vendor-prefix-display();
+                justify-content: space-between;
+                width: 1350px;
+                align-items: flex-end;
+
+                p{
+                    text-transform: uppercase;
+                    letter-spacing: .25px;
+                    padding-right: 30px;
+                }
+
+                .footer-link-row{
+                    height: 30px;
+                    .link-row {
+                        .lib-vendor-prefix-display();
+                        justify-content: space-between;
+                        height: 20px;
+
+                        li {
+                            list-style-type: none;
+                            padding-right: 20px;
+
+                            a{
+                                .lib-font-size(12);
+                                color: @color-elogic-grey1;
+                                text-transform: uppercase;
+                                letter-spacing: 1px;
+                                .lib-css(font-weight, @font-weight__light);
+                                transition: all .4s ease 0s;
+
+                                &:hover{
+                                    color: @color-elogic-black2;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .footer-social {
+                    .lib-vendor-prefix-display();
+                    height: 30px;
+
+                    .link-social {
+                        .lib-vendor-prefix-display();
+                        justify-content: space-between;
+
+                        li{
+                            list-style-type: none;
+                            padding-right: 20px;
+
+                            .behance{
+                                .lib-icon-font(
+                                    @_icon-font-content: @icon-star,
+                                    @_icon-font-color: @color-elogic-grey1
+                                );
+
+                                //&:hover{
+                                //    .lib-icon-font(
+                                //        @_icon-font-color: @color-elogic-black2
+                                //    );
+                                //}
+                            }
+
+                            .facebook{
+                                .lib-icon-font(
+                                    @_icon-font-content: @icon-star,
+                                    @_icon-font-color: @color-elogic-grey1
+                                );
+
+                                //&:hover{
+                                //    .lib-icon-font(
+                                //        @_icon-font-color: @color-elogic-black2
+                                //    );
+                                //}
+                            }
+
+                            .google{
+                                .lib-icon-font(
+                                    @_icon-font-content: @icon-star,
+                                    @_icon-font-color: @color-elogic-grey1
+                                );
+
+                                //&:hover{
+                                //    .lib-icon-font(
+                                //        @_icon-font-color: @color-elogic-black2
+                                //    );
+                                //}
+                            }
+
+                            .skype {
+                                .lib-icon-font(
+                                    @_icon-font-content: @icon-star,
+                                    @_icon-font-color: @color-elogic-grey1
+                                );
+
+                                //&:hover{
+                                //    .lib-icon-font(
+                                //        @_icon-font-color: @color-elogic-black2
+                                //    );
+                                //}
+                            }
+
+                            .twitter {
+                                .lib-icon-font(
+                                    @_icon-font-content: @icon-star,
+                                    @_icon-font-color: @color-elogic-grey1
+                                );
+
+                                //&:hover{
+                                //    .lib-icon-font(
+                                //        @_icon-font-color: @color-elogic-black2
+                                //    );
+                                //}
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
 
 }
 

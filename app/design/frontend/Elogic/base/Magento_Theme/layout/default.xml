@@ -3,10 +3,11 @@
    <body>
        <referenceBlock name="form.subscribe" remove="true"/>
        <referenceContainer name="footer-container">
-           <container name="footer.company.info" label="Custom Main Content Container" htmlTag="div" htmlClass="column main" after="-"/>
+           <container name="footer.company.info" label="Footer Content Container" htmlTag="div" htmlClass="column main" after="-"/>
        </referenceContainer>
 
        <referenceBlock name="footer_links" remove="true"/>
+       <referenceBlock name="copyright" remove="true"/>
 
    </body>
 </page>
