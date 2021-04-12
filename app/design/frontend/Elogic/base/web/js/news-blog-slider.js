@@ -10,7 +10,7 @@ define([
             slickOptions:{
                 infinite: true,
                 slidesToShow: 3,
-                slidesToScroll: 2,
+                slidesToScroll: 3,
                 prevArrow: '<button class="slick-prev" aria-label="Prev" type="button">Prev</button>',
                 nextArrow: '<button class="slick-next" aria-label="Next" type="button">Next</button>'
             }

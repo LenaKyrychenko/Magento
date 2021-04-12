@@ -1,0 +1,34 @@
+// /**
+//  * Copyright © Magento, Inc. All rights reserved.
+//  * See COPYING.txt for license details.
+//  */
+
+//
+//  Common
+//  _____________________________________________
+
+& when (@media-common = true) {
+
+    //
+    //  Minicart
+    //  ---------------------------------------------
+
+    .minicart-wrapper {
+        right: 50px;
+        bottom: 49px;
+        position: absolute;
+
+        .action.showcart {
+            letter-spacing: 1px;
+            &:before {
+                content: 'Cart';
+                .lib-css(font-family, @font-family-poppins);
+                text-transform: uppercase;
+                .lib-css(color, @color-elogic-black2);
+                .lib-font-size(12);
+            }
+        }
+    }
+
+
+}

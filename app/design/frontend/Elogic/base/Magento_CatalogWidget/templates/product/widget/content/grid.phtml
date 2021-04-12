@@ -4,11 +4,12 @@
  * See COPYING.txt for license details.
  */
 use Magento\Framework\App\Action\Action;
-
+/**  @var \Magento\Framework\Escaper $escaper*/
 /** @var \Magento\CatalogWidget\Block\Product\ProductsList $block */
 ?>
 <?php if ($exist = ($block->getProductCollection() && $block->getProductCollection()->getSize())) : ?>
     <?php
+    $objectManager = \Magento\Framework\App\ObjectManager::getInstance();
     $type = 'widget-product-grid';
 
     $mode = 'grid';
@@ -21,6 +22,10 @@ use Magento\Framework\App\Action\Action;
     $showCart = true;
     $templateType = \Magento\Catalog\Block\Product\ReviewRendererInterface::SHORT_VIEW;
     $description = false;
+
+    $_imagehelper = $this->helper('Magento\Catalog\Helper\Image');
+    $hoverimg = 'home-image-hover';
+
     ?>
     <div class="block widget block-products-list <?= /* @noEscape */ $mode ?>">
         <?php if ($block->getTitle()) : ?>
@@ -34,12 +39,24 @@ use Magento\Framework\App\Action\Action;
                 <ol class="product-items <?= /* @noEscape */ $type ?>">
                     <?php $iterator = 1; ?>
                     <?php foreach ($items as $_item) : ?>
-
-
+                    <?php
+                        $productImageAttr = $_item->getCustomAttribute('home-image-hover');
+                        $productImage = $this->helper('Magento\Catalog\Helper\Image');
+                        ?>
                         <?= /* @noEscape */ ($iterator++ == 1) ? '<li class="product-item">' : '</li><li class="product-item">' ?>
                         <div class="product-item-info">
                             <a href="<?= $block->escapeUrl($block->getProductUrl($_item)) ?>" class="product-item-photo">
                                 <?= $block->getImage($_item, $image)->toHtml() ?>
+
+                                <?php $productImage = $_imagehelper->init($_item, $image);
+                                $productImageUrl = $productImage->getUrl(); ?>
+
+                                <?php $productHoverImage = $_imagehelper->init($_item, $hoverimg);
+                                $productHoverImageUrl = $escaper->escapeUrl($productHoverImage->getUrl()); ?>
+                                <?php if($productImageUrl != str_replace("/thumbnail/","/small_image/",$productHoverImageUrl)): ?>
+                                    <img class="product-image-photo hover_image" src="<?php echo $productHoverImageUrl; ?>" alt="<?php echo $productHoverImage->getLabel(); ?>"/>
+                                <?php endif; ?>
+
                             </a>
                             <div class="product-item-details">
                                 <strong class="product-item-name">

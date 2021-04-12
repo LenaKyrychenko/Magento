@@ -334,6 +334,7 @@ return [
         'Dotdigitalgroup_Chat' => 1,
         'Dotdigitalgroup_Sms' => 1,
         'Elogic_CatalogWidget' => 1,
+        'Elogic_Newsletter' => 1,
         'Klarna_Core' => 1,
         'Klarna_Ordermanagement' => 1,
         'Klarna_Kp' => 1,
@@ -345,6 +346,9 @@ return [
         'Vertex_Tax' => 1,
         'Vertex_AddressValidationApi' => 1,
         'Vertex_AddressValidation' => 1,
+        'Ves_All' => 1,
+        'Ves_Megamenu' => 1,
+        'Ves_Setup' => 1,
         'Yotpo_Yotpo' => 1
     ]
 ];

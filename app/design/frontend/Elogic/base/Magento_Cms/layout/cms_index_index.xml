@@ -29,5 +29,10 @@
             </container>
         </referenceContainer>
 
+        <container name="subscribe.modal.container" label="Subscribe Modal Container" htmlTag="div" htmlClass="subscribe-modal-container">
+            <block class="Magento\Newsletter\Block\Subscribe" name="home.modal.subscribe" as="subscribe" after="-" template="Magento_Newsletter::subscribe.phtml" ifconfig="newsletter/general/active"/>
+            <block class="Elogic\Newsletter\Block\IsSubscribedNewsletter" name="home.subscribtion.popup" template="Magento_Cms::modalSubscriptionPopup.phtml"/>
+        </container>
+
     </body>
 </page>

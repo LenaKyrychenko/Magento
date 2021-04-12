@@ -31,7 +31,7 @@
         }
 
         .action.primary{
-            background: @color-elogic-black1;
+            background: @color-elogic-black2;
         }
     }
 }
@@ -60,6 +60,39 @@
 
             &:hover{
                 background: @color-elogic-black3;
+            }
+        }
+    }
+
+    .subscribe-modal-container{
+        .block.newsletter{
+            max-width: 49%;
+
+            .field {
+                &.newsletter {
+                    max-width: 410px;
+                }
+            }
+
+            .form.subscribe{
+                display: flex;
+                flex-direction: column;
+                width: 410px;
+            }
+
+            .action.subscribe {
+                margin-left: 0;
+            }
+
+            input {
+                height: 40px;
+                padding: 11px 10px;
+            }
+
+            .action.subscribe {
+                height: 41px;
+                width: 123px;
+                margin-top: 30px;
             }
         }
     }

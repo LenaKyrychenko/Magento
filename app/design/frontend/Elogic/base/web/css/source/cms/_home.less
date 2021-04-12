@@ -213,6 +213,7 @@
 
             .date-time {
                 .lib-icon-font(
+                    @_icon-font: @font-family-awesome,
                     @_icon-font-content: @icon-calendar,
                     @_icon-font-color: @color-elogic-grey1
                 );
@@ -268,7 +269,7 @@
             }
         }
 
-        .brands-name{
+        .brands-name {
             margin-top: 10px;
             a{
                 .lib-css(font-weight, @font-weight__light);
@@ -281,6 +282,249 @@
             }
         }
     }
+
+    .subscribe-modal-container{
+        width: 850px;
+        height: 420px;
+        background-image: url("https://blueskytechmage.com/drexel/pub/media/rokanthemes/newsletter/background/default/popup_ecd08b275dfa3fa5947ccf0f8e556219.jpg");
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        padding: 60px;
+        transition: all .4s ease 0s;
+    }
+
+    .modal-subscribe-info{
+        width: 410px;
+
+        h3{
+            .lib-font-size(24);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            padding-top: 50px;
+            margin-bottom: 20px;
+            margin-top: 0;
+        }
+
+        p{
+            line-height: 1.5;
+            font-style: italic;
+        }
+
+        .modal-dont-show-label{
+            .lib-css(color, @color-elogic-grey1)
+        }
+    }
+
+    .modal-popup._show .modal-inner-wrap{
+        width: 972px;
+        overflow-y: visible;
+        top: 10vh;
+    }
+
+    .modals-wrapper {
+        .modal-popup {
+            .modal-header {
+                padding: 0;
+            }
+        }
+    }
+
+    .modal-popup-sub {
+
+
+        .modal-inner-wrap {
+            .modal-content {
+                padding: 0;
+            }
+        }
+
+        .modal-header {
+
+            .action-close {
+                background: @color-elogic-black1;
+                height: 40px;
+                width: 40px;
+                border-radius: 100%;
+                position: absolute;
+                right: -35px;
+                top: -35px;
+                .lib-icon-font(
+                    @_icon-font: @font-family-awesome,
+                    @_icon-font-content: @icon-modal-home-close,
+                    @_icon-font-color: @color-elogic-white1,
+                    @_icon-font-color-hover: @color-elogic-white1
+                );
+
+                &:before{
+                    .lib-css(font-weight, @font-weight__heavy);
+                }
+
+                &:hover{
+                    background: @color-elogic-black1;
+                }
+            }
+        }
+
+        .modal-check-show {
+            position: absolute;
+            margin-top: 150px;
+        }
+    }
+
+    .header.links{
+        .lib-vendor-prefix-display();
+        flex-direction: row-reverse;
+        list-style: none;
+        .lib-css(font-family, @font-family-poppins);
+        text-transform: uppercase;
+        margin-right: 75px;
+        .lib-font-size(12);
+        letter-spacing: 1px;
+        .lib-css(font-weight, @font-weight__light);
+
+        li {
+            margin-left: 20px;
+        }
+    }
+
+    .sections.nav-sections{
+        position: absolute;
+    }
+    ///////////////////////////////////////////
+    .header.content{
+        .lib-vendor-prefix-display();
+        height: 6.5vw;
+        align-items: center;
+        padding: 30px 15px 0;
+
+
+        .header-all-links{
+            .lib-vendor-prefix-display();
+            justify-content: space-between;;
+
+            a{
+                letter-spacing: 1px;
+                text-transform: uppercase;
+                transition: all .4s ease;
+
+                &:hover{
+                    .lib-css(color, @color-elogic-grey1);
+                }
+            }
+        }
+
+        .header-navigation{
+            .lib-vendor-prefix-display();
+            list-style: none;
+            justify-content: space-around;
+            width: 470px;
+            margin-left: 115px;
+
+
+            a{
+                .lib-css(font-weight, @font-weight__regular);
+            }
+        }
+
+        .header-link-right{
+            .lib-vendor-prefix-display();
+            width: 205px;
+            justify-content: space-between;
+            .lib-font-size(12);
+            a{
+                .lib-css(font-weight, @font-weight__light);
+            }
+
+            .header-wishlist{
+                .lib-css(width, 15px);
+                .lib-icon-font(
+                    @_icon-font: @font-family-awesome,
+                    @_icon-font-size: 14px,
+                    @_icon-font-content: @icon-add-to-wishlist,
+                    @_icon-font-color: @color-elogic-black1,
+                    @_icon-font-color-hover: @color-elogic-black1
+                );
+
+                &:before{
+                    .lib-css(font-weight, @font-weight__light);
+                }
+            }
+
+            .header-search{
+                .lib-icon-font(
+                    @_icon-font: @font-family-awesome,
+                    @_icon-font-size: 14px,
+                    @_icon-font-content: @icon-search,
+                    @_icon-font-color: @color-elogic-black1,
+                    @_icon-font-color-hover: @color-elogic-black1
+                );
+
+                &:before{
+                    .lib-css(font-weight, @font-weight__heavy);
+                }
+            }
+
+            .header-language{
+                .lib-icon-font(
+                    @_icon-font: @font-family-awesome,
+                    @_icon-font-size: 14px,
+                    @_icon-font-content: @icon-menu,
+                    @_icon-font-color: @color-elogic-black1,
+                    @_icon-font-color-hover: @color-elogic-black1
+                );
+
+                &:before{
+                    .lib-css(font-weight, @font-weight__heavy);
+                }
+            }
+        }
+
+        .submenu{
+            list-style: none;
+            height: 0px;
+            width: 230px;
+            .lib-vendor-prefix-display();
+            flex-direction: column;
+            padding: 0;
+            justify-content: space-around;
+            align-items: center;
+
+            visibility: hidden;
+            transition: all .4s ease;
+            .lib-css(background, @color-elogic-black1);
+            margin-top: 25px;
+            opacity: 0;
+
+            a{
+                .lib-css(color, @color-elogic-grey3);
+                text-transform: none;
+                .lib-css(font-weight, @font-weight__light);
+            }
+        }
+
+        .submenu1{
+            transition: all .4s ease;
+            position: absolute;
+        }
+
+        .submenu2{
+            display: none;
+        }
+
+        .nav-item{
+            height: 20px;
+
+            &:hover{
+                .submenu{
+                    visibility: visible;
+                    height: 235px;
+                    opacity: 1;
+                }
+            }
+        }
+    }
+
 }
 
 //
@@ -324,12 +568,9 @@
         .lib-vendor-prefix-display();
         flex-direction: column;
 
-
-
         ul{
             padding: 0;
         }
-
 
         .footer-top {
             .lib-vendor-prefix-display();
@@ -352,6 +593,7 @@
                         color: @color-elogic-grey1;
                         letter-spacing: .25px;
                         .lib-css(font-weight, @font-weight__light);
+                        transition: all .4s ease 0s;
                     }
 
                     &:hover{
@@ -359,14 +601,16 @@
 
                         a{
                             color: @color-elogic-black2;
+                            margin-left: 2px;
                         }
                     }
 
                     &::marker{
-                        //transition: all .4s ease 0s;
+                        transition: all .4s ease 0s;
                         color: @color-elogic-grey1;
                     }
                 }
+
 
                 h2 {
                     .lib-font-size(16);
@@ -446,73 +690,77 @@
 
                             .behance{
                                 .lib-icon-font(
-                                    @_icon-font-content: @icon-star,
-                                    @_icon-font-color: @color-elogic-grey1
+                                    @_icon-font: @font-family-awesome,
+                                    @_icon-font-content: @icon-footer-behance,
+                                    @_icon-font-color: @color-elogic-grey1,
+                                    @_icon-font-color-hover: @color-elogic-black2
                                 );
 
-                                //&:hover{
-                                //    .lib-icon-font(
-                                //        @_icon-font-color: @color-elogic-black2
-                                //    );
-                                //}
+                                &::before{
+                                    transition: all .4s ease 0s;
+                                }
                             }
 
                             .facebook{
                                 .lib-icon-font(
-                                    @_icon-font-content: @icon-star,
-                                    @_icon-font-color: @color-elogic-grey1
+                                    @_icon-font: @font-family-awesome,
+                                    @_icon-font-content: @icon-footer-facebook,
+                                    @_icon-font-color: @color-elogic-grey1,
+                                    @_icon-font-color-hover: @color-elogic-black2
                                 );
 
-                                //&:hover{
-                                //    .lib-icon-font(
-                                //        @_icon-font-color: @color-elogic-black2
-                                //    );
-                                //}
+                                &::before{
+                                    transition: all .4s ease 0s;
+                                }
                             }
 
                             .google{
                                 .lib-icon-font(
-                                    @_icon-font-content: @icon-star,
-                                    @_icon-font-color: @color-elogic-grey1
+                                    @_icon-font: @font-family-awesome,
+                                    @_icon-font-content: @icon-footer-google,
+                                    @_icon-font-color: @color-elogic-grey1,
+                                    @_icon-font-color-hover: @color-elogic-black2
                                 );
 
-                                //&:hover{
-                                //    .lib-icon-font(
-                                //        @_icon-font-color: @color-elogic-black2
-                                //    );
-                                //}
+                                &::before{
+                                    transition: all .4s ease 0s;
+                                }
                             }
 
                             .skype {
                                 .lib-icon-font(
-                                    @_icon-font-content: @icon-star,
-                                    @_icon-font-color: @color-elogic-grey1
+                                    @_icon-font: @font-family-awesome,
+                                    @_icon-font-content: @icon-footer-skype,
+                                    @_icon-font-color: @color-elogic-grey1,
+                                    @_icon-font-color-hover: @color-elogic-black2
                                 );
 
-                                //&:hover{
-                                //    .lib-icon-font(
-                                //        @_icon-font-color: @color-elogic-black2
-                                //    );
-                                //}
+                                &::before{
+                                    transition: all .4s ease 0s;
+                                }
                             }
 
                             .twitter {
                                 .lib-icon-font(
-                                    @_icon-font-content: @icon-star,
-                                    @_icon-font-color: @color-elogic-grey1
+                                    @_icon-font: @font-family-awesome,
+                                    @_icon-font-content: @icon-footer-twitter,
+                                    @_icon-font-color: @color-elogic-grey1,
+                                    @_icon-font-color-hover: @color-elogic-black2
                                 );
 
-                                //&:hover{
-                                //    .lib-icon-font(
-                                //        @_icon-font-color: @color-elogic-black2
-                                //    );
-                                //}
+                                &::before{
+                                    transition: all .4s ease 0s;
+                                }
                             }
                         }
                     }
                 }
             }
         }
+    }
+
+    .column.main {
+        min-height: 91px;
     }
 
 }
