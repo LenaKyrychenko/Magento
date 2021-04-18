@@ -9,17 +9,13 @@
        <referenceBlock name="footer_links" remove="true"/>
        <referenceBlock name="copyright" remove="true"/>
 
-
-<!--       <referenceContainer name="header-wrapper">-->
-<!--           <container name="header.content.info" label="Header Content Container" htmlTag="div" htmlClass="column main" after="logo" before="block-search"/>-->
-<!--       </referenceContainer>-->
-
-
        <referenceBlock name="header.panel.wrapper" remove="true"/>
        <referenceBlock name="my-account-link" remove="true" />
 
        <move element="navigation.sections" destination="header-wrapper" />
        <move element="top.links" destination="header-wrapper" />
+       <move element="store_language" destination="header-wrapper" />
+<!--       <move element="currency" destination="header-wrapper" />-->
 
 
    </body>

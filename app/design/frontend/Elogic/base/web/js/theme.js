@@ -3,7 +3,7 @@
 //     'matchMedia',
 //     'domReady!',
 //     'elogicFirstSlider'
-// ], function ($, mediaCheck) {
+// ], function ($) {
 //     'use strict';
 //
 //     //
@@ -11,6 +11,17 @@
 //     //  ---------------------------------------------
 //
 //
-//     $('.first-display').elogicFirstSlider();
+//     // $(document).ready(function() {
+//     //     $("#top-home-slider").addClass("isVisible");
+//     // });
+//
+//     $("#top-home-slider").addClass("isVisible");
+//     $(document).ready(function() {
+//         $(window).load(function (){
+//             $("#top-home-slider").removeClass("isVisible");
+//         });
+//     });
 //
 // });
+
+

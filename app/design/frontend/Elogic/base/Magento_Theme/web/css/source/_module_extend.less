@@ -1,0 +1,237 @@
+//
+//  Common
+//  _____________________________________________
+
+& when (@media-common = true) {
+
+    .header.links{
+        .lib-vendor-prefix-display();
+        flex-direction: row-reverse;
+        list-style: none;
+        .lib-css(font-family, @font-family-poppins);
+        text-transform: uppercase;
+        margin-right: 85px;
+        .lib-font-size(12);
+        letter-spacing: 1px;
+        .lib-css(font-weight, @font-weight__light);
+
+        li {
+            margin-left: 20px;
+        }
+    }
+
+    .sections.nav-sections{
+        position: absolute;
+    }
+
+    .header.content{
+        .lib-vendor-prefix-display();
+        height: 6.5vw;
+        align-items: center;
+        padding: 30px 15px 0;
+    }
+}
+
+//
+//  Desktop
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+
+    .footer-content {
+
+        .lib-vendor-prefix-display();
+        flex-direction: column;
+
+        ul{
+            padding: 0;
+        }
+
+        .footer-top {
+            .lib-vendor-prefix-display();
+            justify-content: center;
+
+            .footer-container {
+                .lib-vendor-prefix-display();
+                justify-content: space-between;
+                height: 389px;
+                align-items: center;
+                width: 1350px;
+
+                li {
+                    list-style-type: none;
+                    list-style-position: inside;
+                    margin: 0;
+                    padding-bottom: 15px;
+
+                    a{
+                        color: @color-elogic-grey1;
+                        letter-spacing: .25px;
+                        .lib-css(font-weight, @font-weight__light);
+                        transition: all .4s ease 0s;
+                    }
+
+                    &:hover{
+                        list-style-type: disc;
+
+                        a{
+                            color: @color-elogic-black2;
+                            margin-left: 2px;
+                        }
+                    }
+
+                    &::marker{
+                        transition: all .4s ease 0s;
+                        color: @color-elogic-grey1;
+                    }
+                }
+
+
+                h2 {
+                    .lib-font-size(16);
+                    .lib-css(font-weight, @font-weight__heavier);
+                    margin-bottom: 40px;
+
+                    a {
+                        color: @color-elogic-black2;
+                        .lib-css(font-weight, @font-weight__heavier);
+                    }
+                }
+
+                .footer-links-item{
+                    height: 262px;
+                    width: 300px;
+                }
+            }
+        }
+
+        .footer-bottom {
+            border-top: 1px @color-elogic-white2 solid;
+            .lib-vendor-prefix-display();
+            justify-content: center;
+            height: 79px;
+
+            .footer-container {
+
+                .lib-vendor-prefix-display();
+                justify-content: space-between;
+                width: 1350px;
+                align-items: flex-end;
+
+                p{
+                    text-transform: uppercase;
+                    letter-spacing: .25px;
+                    padding-right: 30px;
+                }
+
+                .footer-link-row{
+                    height: 30px;
+                    .link-row {
+                        .lib-vendor-prefix-display();
+                        justify-content: space-between;
+                        height: 20px;
+
+                        li {
+                            list-style-type: none;
+                            padding-right: 20px;
+
+                            a{
+                                .lib-font-size(12);
+                                color: @color-elogic-grey1;
+                                text-transform: uppercase;
+                                letter-spacing: 1px;
+                                .lib-css(font-weight, @font-weight__light);
+                                transition: all .4s ease 0s;
+
+                                &:hover{
+                                    color: @color-elogic-black2;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .footer-social {
+                    .lib-vendor-prefix-display();
+                    height: 30px;
+
+                    .link-social {
+                        .lib-vendor-prefix-display();
+                        justify-content: space-between;
+
+                        li{
+                            list-style-type: none;
+                            padding-right: 20px;
+
+                            .behance{
+                                .lib-icon-font(
+                                    @_icon-font: @font-family-awesome,
+                                    @_icon-font-content: @icon-footer-behance,
+                                    @_icon-font-color: @color-elogic-grey1,
+                                    @_icon-font-color-hover: @color-elogic-black2
+                                );
+
+                                &::before{
+                                    transition: all .4s ease 0s;
+                                }
+                            }
+
+                            .facebook{
+                                .lib-icon-font(
+                                    @_icon-font: @font-family-awesome,
+                                    @_icon-font-content: @icon-footer-facebook,
+                                    @_icon-font-color: @color-elogic-grey1,
+                                    @_icon-font-color-hover: @color-elogic-black2
+                                );
+
+                                &::before{
+                                    transition: all .4s ease 0s;
+                                }
+                            }
+
+                            .google{
+                                .lib-icon-font(
+                                    @_icon-font: @font-family-awesome,
+                                    @_icon-font-content: @icon-footer-google,
+                                    @_icon-font-color: @color-elogic-grey1,
+                                    @_icon-font-color-hover: @color-elogic-black2
+                                );
+
+                                &::before{
+                                    transition: all .4s ease 0s;
+                                }
+                            }
+
+                            .skype {
+                                .lib-icon-font(
+                                    @_icon-font: @font-family-awesome,
+                                    @_icon-font-content: @icon-footer-skype,
+                                    @_icon-font-color: @color-elogic-grey1,
+                                    @_icon-font-color-hover: @color-elogic-black2
+                                );
+
+                                &::before{
+                                    transition: all .4s ease 0s;
+                                }
+                            }
+
+                            .twitter {
+                                .lib-icon-font(
+                                    @_icon-font: @font-family-awesome,
+                                    @_icon-font-content: @icon-footer-twitter,
+                                    @_icon-font-color: @color-elogic-grey1,
+                                    @_icon-font-color-hover: @color-elogic-black2
+                                );
+
+                                &::before{
+                                    transition: all .4s ease 0s;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}

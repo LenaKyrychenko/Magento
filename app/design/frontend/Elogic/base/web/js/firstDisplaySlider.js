@@ -23,6 +23,8 @@ define([
             }
             this.element.slick(this.options.slickOptions);
         }
+
+
     });
 
     return $.elogic.firstDisplaySlider;

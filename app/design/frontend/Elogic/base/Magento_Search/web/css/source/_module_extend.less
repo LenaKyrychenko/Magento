@@ -6,25 +6,33 @@
 & when (@media-common = true) {
     .block-search{
         margin-top: 46px;
-        margin-right: -6vw;
+        margin-right: -5.2vw;
 
         input {
             height: 43px;
             width: 368px;
             padding: 0 45px 0 25px;
+            .lib-css(background, @color-elogic-black2);
+            .lib-input-placeholder(@_input-placeholder-color:@color-elogic-white1);
         }
     }
 
     .header {
         .block-search {
-            .action.search {
+            .action.search[disabled] {
+                opacity: 1;
+                right: -115px;
+                top: 12px;
                 .lib-icon-font(
-                    @_icon-font-content: '\f002',
-                    @_icon-font: @font-family-awesome
+                    @_icon-font-content: @icon-search,
+                    @_icon-font: @font-family-awesome,
+                    @_icon-font-color: @color-elogic-white1,
+                    @_icon-font-size: 14px
                 );
             }
         }
     }
+
 }
 
 //
@@ -39,7 +47,7 @@
             width: 30px;
             height: 30px;
             bottom: 44px;
-            right: -130px;
+            right: -145px;
 
             .lib-icon-font(
                 @_icon-font-content: @icon-search,
@@ -53,6 +61,22 @@
                 .lib-css(font-weight, @font-weight__heavy);
             }
         }
+    }
 
+    .minisearch{
+        .control,
+        .actions{
+            opacity: 0;
+            //height: 0;
+            transition: all .5s ease;
+        }
+    }
+
+    .minisearch.active{
+        .control,
+        .actions{
+            opacity: 1;
+            //height: max-content;
+        }
     }
 }
