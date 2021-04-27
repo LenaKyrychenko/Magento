@@ -8,6 +8,7 @@ define([
     $.widget('elogic.carousel', {
         options:{
             slickOptions:{
+                template: '',
                 infinite: true,
                 slidesToShow: 4,
                 slidesToScroll: 1,
@@ -40,10 +41,10 @@ define([
         },
 
         _create: function (){
-            if(this.element.hasClass('slick-initialized')){
-                this.element.slick('unslick');
+            if($(this.options.slickOptions.template).hasClass('slick-initialized')){
+                $(this.options.slickOptions.template).slick('unslick');
             }
-            this.element.slick(this.options.slickOptions);
+            $(this.options.slickOptions.template).slick(this.options.slickOptions);
         }
     });
 

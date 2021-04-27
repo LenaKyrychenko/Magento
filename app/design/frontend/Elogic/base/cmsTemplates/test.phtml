@@ -1,0 +1,233 @@
+//
+//  first display
+//  _____________________________________________
+
+<div id="top-home-slider" class="first-display">
+    <div class="home1">
+        <img src="{{media url="wysiwyg/banners/home3-1.jpg"}}" alt="">
+        <div class="descr">
+            <h2>Clearance</h2>
+            <span class="new">Giver a timeless classic a home</span>
+            <p>It is a long established fact that a reader will</p>
+        </div>
+        {{widget class="underline" type="Magento\Catalog\Block\Product\Widget\Link" anchor_text="View now" template="product/widget/link/link_block.phtml" id_path="product/2054/41"}}</div>
+    <div class="home2">
+        <img src="{{media url="wysiwyg/banners/home3-2.jpg"}}" alt="">
+        <div class="descr">
+            <h2><span class="new">Cherner</span> Armchair</h2>
+            <p>The 1958 moulded plywood armchair by Norman Cherner</p>
+        </div>
+        {{widget class="underline" type="Magento\Catalog\Block\Product\Widget\Link" anchor_text="View now" template="product/widget/link/link_block.phtml" id_path="product/2055/41"}}</div>
+</div>
+
+//
+//  banners
+//  _____________________________________________
+
+<div class="banners">
+    <div class="blockdesc">
+        <img src="{{media url="wysiwyg/banners/banner-home3-1.jpg"}}" alt="clocks">
+        <div class="descr">
+            <h2>Clocks</h2>
+            <p>The 1958 moulded plywood armchair by Norman Cherner</p>
+            <a class="underline" href="#">View now</a>
+        </div>
+    </div>
+    <div class="blockdesc">
+        <img src="{{media url="wysiwyg/banners/banner-home3-2.jpg"}}" alt="lights">
+        <div class="descr">
+            <h2><span class="new">New</span> Lights</h2>
+            <p>The 1958 moulded plywood armchair by Norman Cherner</p>
+            <a class="underline" href="#">View now</a>
+        </div>
+    </div>
+</div>
+
+//
+//  productList
+//  _____________________________________________
+
+<div class="top-of-block">
+    <h2>Our Products</h2>
+    <p>Most trendy furniture</p>
+    <div class="lines">
+        <div class="line-gor">&nbsp;</div>
+        <div class="line-ver">&nbsp;</div>
+    </div>
+</div>
+<p>{{widget type="Magento\CatalogWidget\Block\Product\ProductsList" show_pager="0" products_count="10" template="Magento_CatalogWidget::product/widget/content/grid.phtml" conditions_encoded="^[`1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Combine`,`aggregator`:`all`,`value`:`1`,`new_child`:``^],`1--1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Product`,`attribute`:`category_ids`,`operator`:`==`,`value`:`9`^]^]"}}</p>
+
+//
+//  novemberSale
+//  _____________________________________________
+
+<div class="nov-sale">
+    <img src="{{media url="wysiwyg/banners/banner-home3-3.jpg"}}" alt="">
+    <div class="sale-text-with-link">
+        <div class="sale-text">
+            <h2>November Sale</h2>
+            <p>Free Shipping over $125 For International Orders</p>
+        </div>
+        <a class="underline" href="#">Shop Now</a>
+    </div>
+</div>
+
+//
+//  Triple Slider
+//  _____________________________________________
+
+<div class="triple-slider">
+    <div class="triple-slider-item">
+        <h2>Bestsellers</h2>
+        <div class="line-ver"></div>
+        {{widget type="Magento\CatalogWidget\Block\Product\ProductsList" show_pager="0" products_count="10" template="Magento_CatalogWidget::product/widget/content/grid.phtml" conditions_encoded="^[`1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Combine`,`aggregator`:`all`,`value`:`1`,`new_child`:``^],`1--1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Product`,`attribute`:`category_ids`,`operator`:`==`,`value`:`41`^]^]"}}
+    </div>
+    <div class="triple-slider-item">
+        <h2>Featured</h2>
+        <div class="line-ver"></div>
+        {{widget type="Magento\CatalogWidget\Block\Product\ProductsList" show_pager="0" products_count="10" template="Magento_CatalogWidget::product/widget/content/grid.phtml" conditions_encoded="^[`1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Combine`,`aggregator`:`all`,`value`:`1`,`new_child`:``^],`1--1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Product`,`attribute`:`category_ids`,`operator`:`==`,`value`:`41`^]^]"}}
+    </div>
+    <div class="triple-slider-item">
+        <h2>Most Viewed</h2>
+        <div class="line-ver"></div>
+        {{widget type="Magento\CatalogWidget\Block\Product\ProductsList" show_pager="0" products_count="10" template="Magento_CatalogWidget::product/widget/content/grid.phtml" conditions_encoded="^[`1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Combine`,`aggregator`:`all`,`value`:`1`,`new_child`:``^],`1--1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Product`,`attribute`:`category_ids`,`operator`:`==`,`value`:`41`^]^]"}}
+    </div>
+</div>
+
+//
+//  News & Blog
+//  _____________________________________________
+
+<div class="top-of-block">
+    <h2>News &amp; Blog</h2>
+    <p>Most trendy furniture</p>
+    <div class="lines">
+        <div class="line-gor">&nbsp;</div>
+        <div class="line-ver">&nbsp;</div>
+    </div>
+</div>
+<div class="news-blog">
+    <div class="news-blog-item"><img src="{{media url="wysiwyg/newsAndBlog/09_4.jpg"}}" alt="">
+        <h3>Aptent taciti soci litora cianpen</h3>
+        <div class="date-time">16-May-2017</div>
+        <p>Donec faucibus enim vitae volutpat sollicitudin. Mauris gravida nulla turpis, sit amet feugiat magna la</p>
+    </div>
+    <div class="news-blog-item"><img src="{{media url="wysiwyg/newsAndBlog/04_4.jpg"}}" alt="">
+        <h3>Mauris gravida nulla turpis</h3>
+        <div class="date-time">16-May-2017</div>
+        <p>Donec faucibus enim vitae volutpat sollicitudin. Mauris gravida nulla turpis, sit amet feugiat magna la</p>
+    </div>
+    <div class="news-blog-item"><img src="{{media url="wysiwyg/newsAndBlog/03_4.jpg"}}" alt="">
+        <h3>Fusce gravida maximus elit</h3>
+        <div class="date-time">16-May-2017</div>
+        <p>Donec faucibus enim vitae volutpat sollicitudin. Mauris gravida nulla turpis, sit amet feugiat magna la</p>
+    </div>
+    <div class="news-blog-item"><img src="{{media url="wysiwyg/newsAndBlog/05_2.jpg"}}" alt="">
+        <h3>Integer urna nuncve hicula</h3>
+        <div class="date-time">16-May-2017</div>
+        <p>Donec faucibus enim vitae volutpat sollicitudin. Mauris gravida nulla turpis, sit amet feugiat magna la</p>
+    </div>
+    <div class="news-blog-item"><img src="{{media url="wysiwyg/newsAndBlog/04_4.jpg"}}" alt="">
+        <h3>Mauris gravida nulla turpis</h3>
+        <div class="date-time">16-May-2017</div>
+        <p>Donec faucibus enim vitae volutpat sollicitudin. Mauris gravida nulla turpis, sit amet feugiat magna la</p>
+    </div>
+</div>
+
+//
+//  Brands
+//  _____________________________________________
+
+<div class="title-of-block">
+    <hr>
+    <strong>Shop By Brands</strong>
+    <hr>
+</div>
+<div class="line-ver"></div>
+
+<div class="brands">
+    <div class="brands-item">
+        <img src="{{media url=&quot;wysiwyg/brands/brand1_bc12606a864d8675c6f925455b3c32eb.jpg&quot;}}" alt="" />
+        <div class="brands-name">
+            <a href="https://blueskytechmage.com/drexel/en2/brand/hammary.html" title="Hammary">Hammary</a>
+        </div>
+    </div>
+
+    <div class="brands-item">
+        <img src="{{media url=&quot;wysiwyg/brands/brand2_af4945628435df11a3de0686bd9c4157.jpg&quot;}}" alt="" />
+        <div class="brands-name">
+            <a href="https://blueskytechmage.com/drexel/en2/brand/herman-miller.html" title="Herman Miller"> Herman Miller</a>
+        </div>
+    </div>
+
+    <div class="brands-item">
+        <img src="{{media url=&quot;wysiwyg/brands/brand3_5bba384c08d51704fbc44238fc1f075b.jpg&quot;}}" alt="" />
+        <div class="brands-name">
+            <a href="https://blueskytechmage.com/drexel/en2/brand/stressless.html" title="Stressless">Stressless</a>
+        </div>
+    </div>
+
+    <div class="brands-item">
+        <img src="{{media url=&quot;wysiwyg/brands/brand5_7015ca7a49836d2461f226edc65db20b.jpg&quot;}}" alt="" />
+        <div class="brands-name">
+            <a href="https://blueskytechmage.com/drexel/en2/brand/greenington.html" title="Greenington">Greenington</a>
+        </div>
+    </div>
+
+    <div class="brands-item">
+        <img src="{{media url=&quot;wysiwyg/brands/brand1_bc12606a864d8675c6f925455b3c32eb.jpg&quot;}}" alt="" />
+        <div class="brands-name">
+            <a href="https://blueskytechmage.com/drexel/en2/brand/knoll.html" title="Knoll">Knoll</a>
+        </div>
+    </div>
+
+    <div class="brands-item">
+        <img src="{{media url=&quot;wysiwyg/brands/brand6_54f5ad48f6c2071a4f8793628d354b5b.jpg&quot;}}" alt="" />
+        <div class="brands-name">
+            <a href="https://blueskytechmage.com/drexel/en2/brand/innovation.html" title="Innovation">Innovation</a>
+        </div>
+    </div>
+
+    <div class="brands-item">
+        <img src="{{media url=&quot;wysiwyg/brands/brand554_4de3b39e3441597716a4aea7924babd3.jpg&quot;}}" alt="" />
+        <div class="brands-name">
+            <a href="https://blueskytechmage.com/drexel/en2/brand/american-drew.html" title="American Drew">American Drew</a>
+        </div>
+    </div>
+
+    <div class="brands-item">
+        <img src="{{media url=&quot;wysiwyg/brands/brand5_7015ca7a49836d2461f226edc65db20b.jpg&quot;}}" alt="" />
+        <div class="brands-name">
+            <a href="https://blueskytechmage.com/drexel/en2/brand/younger.html" title="Younger">Younger</a>
+        </div>
+    </div>
+
+    <div class="brands-item">
+        <img src="{{media url=&quot;wysiwyg/brands/brand2_af4945628435df11a3de0686bd9c4157.jpg&quot;}}" alt="" />
+        <div class="brands-name">
+            <a href="https://blueskytechmage.com/drexel/en2/brand/lexington.html" title="Lexington">Lexington</a>
+        </div>
+    </div>
+
+    <div class="brands-item">
+        <img src="{{media url=&quot;wysiwyg/brands/brand3_5bba384c08d51704fbc44238fc1f075b.jpg&quot;}}" alt="" />
+        <div class="brands-name">
+            <a href="https://blueskytechmage.com/drexel/en2/brand/tommy-bahama-home.html" title="Tommy Bahama Home">Tommy Bahama Home</a>
+        </div>
+    </div>
+
+    <div class="brands-item">
+        <img src="{{media url=&quot;wysiwyg/brands/brand1_bc12606a864d8675c6f925455b3c32eb.jpg&quot;}}" alt="" />
+        <div class="brands-name">
+            <a href="https://blueskytechmage.com/drexel/en2/brand/copeland.html" title="Copeland">Copeland</a>
+        </div>
+    </div>
+
+    <div class="brands-item">
+        <img src="{{media url=&quot;wysiwyg/brands/brand6_54f5ad48f6c2071a4f8793628d354b5b.jpg&quot;}}" alt="" />
+        <div class="brands-name">
+            <a href="https://blueskytechmage.com/drexel/en2/brand/stanley.html" title="Stanley">Stanley</a>
+        </div>
+    </div>
+</div>
+

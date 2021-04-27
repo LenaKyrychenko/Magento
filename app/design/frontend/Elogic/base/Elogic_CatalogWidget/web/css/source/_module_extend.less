@@ -1,0 +1,157 @@
+//
+//  Slick slider styles
+//  _____________________________________________
+
+& when (@media-common = true) {
+    .slick-prev {
+        left: ~'calc(100% - 100px)';
+        &:before {
+            //.lib-vendor-prefix-appearance();
+            display: none;
+        }
+    }
+
+    .slick-next {
+        right: -14px;
+        &:before {
+            display: none;
+        }
+    }
+
+    .slick-prev,
+    .slick-next {
+        .lib-font-size(12);
+        color: @color-elogic-black1;
+        top: -50px;
+        .lib-css(font-weight, @font-weight__light);
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+    .slick-prev:not(.primary),
+    .slick-next:not(.primary) {
+        background: none;
+    }
+
+    .slick-prev:hover,
+    .slick-next:hover
+    {
+        background: none;
+        color: @color-elogic-black1;
+    }
+
+    .slick-slide {
+        img{
+            width: 100%;
+        }
+    }
+
+    .slick-dots {
+
+        margin-top: -65px;
+
+        li {
+            height: 10px;
+            margin: 5px 4px;
+            width: 10px;
+
+            button {
+                border-radius: 0;
+                border: 2px solid @color-elogic-black1;
+                height: 10px;
+                width: 10px;
+                transition: 0s;
+
+                &:hover {
+                    background: @color-elogic-black1;
+                    border: 1px solid @color-elogic-black1;
+                }
+            }
+        }
+    }
+
+    .triple-slider-item {
+        &:hover {
+            .slick-prev,
+            .slick-next{
+                opacity: 1;
+            }
+        }
+
+        .slick-prev {
+            left: ~'calc(100% - 120px)';
+            top: -69px;
+            opacity: 0;
+        }
+
+        .slick-next {
+            margin-right: 10px;
+            top: -69px;
+            opacity: 0;
+        }
+    }
+
+    .brands {
+        .slick-dots {
+            margin-top: 10px;
+        }
+
+        .slick-prev,
+        .slick-next{
+            top: -22px;
+        }
+
+    }
+}
+
+//
+//  Desktop (style-l.css)
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+
+    #home-our-products {
+        .product-items {
+            .slick-track {
+                margin: 0 -15px;
+            }
+
+            .slick-slide {
+                padding: 0 15px;
+                width: 308px;
+            }
+        }
+    }
+
+    .news-blog{
+        .slick-track{
+            margin: 0 -15px;
+        }
+
+        .slick-slide {
+            padding: 0 15px;
+            width: 420px;
+        }
+    }
+}
+
+//
+//  Tablet
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
+
+    .slick-dots {
+
+        li {
+            height: 9px;
+            width: 9px;
+
+            button {
+                height: 9px;
+                width: 9px;
+            }
+        }
+    }
+}
+
