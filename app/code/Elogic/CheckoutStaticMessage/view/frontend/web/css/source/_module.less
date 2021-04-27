@@ -1,0 +1,34 @@
+//
+//  Common
+//  _____________________________________________
+
+& when (@media-common = true) {
+    .checkout-title-cart {
+        .lib-css(font-weight, @font-weight__heavier);
+        margin-bottom: 20px;
+        .lib-font-size(18);
+    }
+
+    .subtitle-cart-message {
+        text-transform: none;
+        .lib-css(font-weight, @font-weight__light);
+        .lib-font-size(14);
+    }
+}
+
+
+//
+//  Mobile 640
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__s) {
+    .cart-title-wrapper {
+        margin-left: 2%;
+    }
+
+    .cart-subtitle-wrapper {
+        margin-left: 2%;
+    }
+}
+
+

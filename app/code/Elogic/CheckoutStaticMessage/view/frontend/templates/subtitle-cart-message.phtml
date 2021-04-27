@@ -1,0 +1,8 @@
+<?php
+
+/** @var $viewModel \Elogic\CheckoutStaticMessage\ViewModel\CartSubTitleViewModel */
+
+$viewModel = $block->getViewModel();
+
+?>
+<h2 class="subtitle-cart-message"><?php echo $block->escapeHtml($viewModel->isCartEmpty()); ?></h2>

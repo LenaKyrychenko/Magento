@@ -151,7 +151,7 @@
 
     .contact-us-info {
         .lib-vendor-prefix-display();
-        flex-direction: column;
+        .lib-vendor-prefix-flex-direction();
         font-size: 0.866vw;
         line-height: 2;
         .lib-css(color, @color-elogic-grey1);
@@ -164,7 +164,7 @@
     .footer-content {
 
         .lib-vendor-prefix-display();
-        flex-direction: column;
+        .lib-vendor-prefix-flex-direction();
 
         ul{
             padding: 0;
@@ -465,38 +465,37 @@
 
     .footer-content {
         .footer-top {
-
             .footer-container {
                 .lib-vendor-prefix-display();
-                flex-wrap: wrap;
-                flex-direction: column;
+                .lib-vendor-prefix-flex-wrap();
+                .lib-vendor-prefix-flex-direction();
                 padding-left: ~'calc(1.5%)';
 
                 .footer-links-item {
                     height: max-content;
+                }
+            }
+        }
 
-                    .title {
-                        a {
-                            &:after {
-                                content: @icon-accordion-plus;
-                                .lib-css(font-family, @font-family-awesome);
-                                position: absolute;
-                                .lib-css(color, @color-elogic-black2);
-                                .lib-css(background, @color-elogic-white2);
-                                right: 4%;
-                                line-height: 30px;
-                                width: 22px;
-                                padding-left: 8px;
-                                height: 30px;
-                            }
+        .title {
+            a {
+                &:after {
+                    content: @icon-accordion-plus;
+                    .lib-css(font-family, @font-family-awesome);
+                    position: absolute;
+                    .lib-css(color, @color-elogic-black2);
+                    .lib-css(background, @color-elogic-white2);
+                    right: 4%;
+                    line-height: 30px;
+                    width: 22px;
+                    padding-left: 8px;
+                    height: 30px;
+                }
 
-                            &.active {
-                                &:after {
-                                    .lib-css(color, @color-elogic-white2);
-                                    .lib-css(background, @color-elogic-black2);
-                                }
-                            }
-                        }
+                &.active {
+                    &:after {
+                        .lib-css(color, @color-elogic-white2);
+                        .lib-css(background, @color-elogic-black2);
                     }
                 }
             }
@@ -508,7 +507,7 @@
 
             .footer-container {
                 .lib-vendor-prefix-display();
-                flex-direction: column;
+                .lib-vendor-prefix-flex-direction();
                 width: 100%;
 
                 .footer-link-row{
