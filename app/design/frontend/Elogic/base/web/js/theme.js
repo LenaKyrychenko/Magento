@@ -1,16 +1,23 @@
-// define([
-//     'jquery',
-//     'matchMedia',
-//     'domReady!',
-//     'elogicFirstSlider'
-// ], function ($, mediaCheck) {
-//     'use strict';
-//
-//     //
-//     // custom js
-//     //  ---------------------------------------------
-//
-//
-//     $('.first-display').elogicFirstSlider();
-//
-// });
+define([
+    'jquery',
+    'matchMedia',
+    'domReady!'
+], function ($) {
+    'use strict';
+
+    //
+    // custom js
+    //  ---------------------------------------------
+
+
+    $(window).scroll(function () {
+        if( $(window).scrollTop() > $('.page-header').height() && !($('.page-header').hasClass('sticky'))){
+            $('.page-header').addClass('sticky');
+        } else if ($(window).scrollTop() === 0){
+            $('.page-header').removeClass('sticky');
+        }
+    });
+
+});
+
+

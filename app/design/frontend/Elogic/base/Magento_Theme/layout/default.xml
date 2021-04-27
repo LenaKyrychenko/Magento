@@ -3,10 +3,40 @@
    <body>
        <referenceBlock name="form.subscribe" remove="true"/>
        <referenceContainer name="footer-container">
-           <container name="footer.company.info" label="Custom Main Content Container" htmlTag="div" htmlClass="column main" after="-"/>
+           <container name="footer.company.info" label="Footer Content Container" htmlTag="div" htmlClass="column main" after="-"/>
        </referenceContainer>
 
        <referenceBlock name="footer_links" remove="true"/>
+       <referenceBlock name="copyright" remove="true"/>
+
+       <referenceBlock name="header.panel.wrapper" remove="true"/>
+       <referenceBlock name="my-account-link" remove="true" />
+
+       <container name="language.slide.container" label="Language Slide Container" htmlTag="div" htmlClass="language_slide_container">
+           <block class="Magento\Framework\View\Element\Template" name="language.slide" template="Magento_Theme::languageSlide.phtml"/>
+           <block class="Magento\Cms\Block\Block" name="contact.us.block" after="-">
+               <arguments>
+                   <argument name="block_id" xsi:type="string">contact_us_modal</argument>
+               </arguments>
+           </block>
+       </container>
+
+       <referenceContainer name="content">
+           <block class="Magento\Framework\View\Element\Template" name="footer.accordion" template="Magento_Theme::footerAccordion.phtml"/>
+       </referenceContainer>
+
+       <block class="Magento\Framework\View\Element\Template" name="btn.open.language.slider" template="Magento_Theme::buttonForLanguageSlide.phtml"/>
+
+       <move element="store_language" destination="language.slide.container" />
+       <move element="currency" destination="language.slide.container" />
+
+       <move element="top.links" destination="header-wrapper" />
+       <move element="navigation.sections" destination="header-wrapper" />
+
+       <move element="minicart" destination="top.links" before="top.search"/>
+       <move element="top.search" destination="top.links" before="btn.open.language.slider"/>
+       <move element="btn.open.language.slider" destination="top.links" after="-"/>
+
 
    </body>
 </page>

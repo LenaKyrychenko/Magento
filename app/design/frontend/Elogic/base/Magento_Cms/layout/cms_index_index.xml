@@ -2,11 +2,11 @@
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <body>
         <referenceContainer name="content">
-            <block class="Magento\Framework\View\Element\Template" name="top.slider" template="Magento_Theme::firstDisplay.phtml"/>
-            <block class="Magento\Framework\View\Element\Template" name="home.products.slider" template="Magento_Cms::carousel.phtml"/>
-            <block class="Magento\Framework\View\Element\Template" name="triple.slider" template="Magento_Theme::tripleSlider.phtml"/>
-            <block class="Magento\Framework\View\Element\Template" name="news.blog.slider" template="Magento_Theme::newsAndBlogSlider.phtml"/>
-            <block class="Magento\Framework\View\Element\Template" name="brands.slider" template="Magento_Theme::brandsSlider.phtml"/>
+            <block class="Magento\Framework\View\Element\Template" name="top.slider" template="Magento_Cms::firstDisplay.phtml"/>
+            <block class="Magento\Framework\View\Element\Template" name="home.products.slider" template="Magento_Cms::elogicProductSlider.phtml"/>
+            <block class="Magento\Framework\View\Element\Template" name="triple.slider" template="Magento_Cms::tripleSlider.phtml"/>
+            <block class="Magento\Framework\View\Element\Template" name="news.blog.slider" template="Magento_Cms::newsAndBlogSlider.phtml"/>
+            <block class="Magento\Framework\View\Element\Template" name="brands.slider" template="Magento_Cms::brandsSlider.phtml"/>
         </referenceContainer>
 
         <referenceContainer name="page.wrapper">
@@ -25,9 +25,19 @@
 
         <referenceContainer name="subscribe-main">
             <container name="subscribe.form.container" label="Subscribe Form Container" htmlTag="div" htmlClass="subscribe-form-container">
-                <block class="Magento\Newsletter\Block\Subscribe" name="home.form.subscribe" as="subscribe" after="-" template="Magento_Newsletter::subscribe.phtml" ifconfig="newsletter/general/active"/>
+                <block class="Magento\Newsletter\Block\Subscribe" name="home.form.subscribe" as="subscribe" after="-" template="Magento_Newsletter::subscribe.phtml" ifconfig="newsletter/general/active">
+                    <arguments>
+                        <argument name="form_popup_newsletter" xsi:type="string">form-popup-newsletter</argument>
+                        <argument name="input_popup_newsletter" xsi:type="string">input-popup-newsletter</argument>
+                    </arguments>
+                </block>
             </container>
         </referenceContainer>
+
+        <container name="subscribe.modal.container" label="Subscribe Modal Container" htmlTag="div" htmlClass="subscribe-modal-container">
+            <block class="Magento\Newsletter\Block\Subscribe" name="home.modal.subscribe" as="subscribe" after="-" template="Magento_Newsletter::subscribe.phtml" ifconfig="newsletter/general/active"/>
+            <block class="Elogic\Newsletter\Block\IsSubscribedNewsletter" name="home.subscribtion.popup" template="Magento_Cms::modalSubscriptionPopup.phtml"/>
+        </container>
 
     </body>
 </page>
