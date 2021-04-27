@@ -6,7 +6,6 @@
     .slick-prev {
         left: ~'calc(100% - 100px)';
         &:before {
-            //.lib-vendor-prefix-appearance();
             display: none;
         }
     }
@@ -20,8 +19,9 @@
 
     .slick-prev,
     .slick-next {
+        height: 25px;
         .lib-font-size(12);
-        color: @color-elogic-black1;
+        .lib-css(color, @color-elogic-black1);
         top: -50px;
         .lib-css(font-weight, @font-weight__light);
         text-transform: uppercase;
@@ -37,7 +37,7 @@
     .slick-next:hover
     {
         background: none;
-        color: @color-elogic-black1;
+        .lib-css(color, @color-elogic-black1);
     }
 
     .slick-slide {
@@ -63,7 +63,7 @@
                 transition: 0s;
 
                 &:hover {
-                    background: @color-elogic-black1;
+                    .lib-css(background, @color-elogic-black1);
                     border: 1px solid @color-elogic-black1;
                 }
             }
@@ -88,6 +88,7 @@
             margin-right: 10px;
             top: -69px;
             opacity: 0;
+            border-left: 1px black solid;
         }
     }
 
@@ -101,6 +102,26 @@
             top: -22px;
         }
 
+        .slick-next {
+            border-left: 1px black solid;
+        }
+    }
+
+    .news-blog{
+        .slick-next {
+            border-left: 1px black solid;
+        }
+
+        .slick-prev,
+        .slick-next {
+            top: -43px;
+        }
+    }
+
+    #home-our-products {
+        .slick-next {
+            border-left: 1px black solid;
+        }
     }
 }
 
@@ -148,6 +169,31 @@
             button {
                 height: 9px;
                 width: 9px;
+            }
+        }
+    }
+}
+
+//
+//  Mobile L 480
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__xs) {
+
+    .first-display {
+        .slick-dots {
+            margin-top: -50px;
+
+            li {
+                height: 5px;
+                width: 5px;
+                margin: 3px 2px;
+
+                button {
+                    height: 5px;
+                    width: 5px;
+                    border: 1px solid @color-elogic-black1;
+                }
             }
         }
     }

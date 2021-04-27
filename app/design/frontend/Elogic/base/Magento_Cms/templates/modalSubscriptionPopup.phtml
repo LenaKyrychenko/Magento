@@ -10,9 +10,9 @@ $_subscribeCustomerStatus = $block->checkCustomerIsSubscribe();
 {
     ".subscribe-modal-container":{
         "elogicModalSubscription":{
-        "isCustomerSubscribed": <?= /* @noEscape */ $_subscribeCustomerStatus ? 'true' : 'false' ?>,
-        "checkBox": "#modal-subscribe-dont_show_again",
-        "modalOptions":{
+            "isCustomerSubscribed": <?= /* @noEscape */ $_subscribeCustomerStatus ? 'true' : 'false' ?>,
+            "checkBox": "#modal-subscribe-dont_show_again",
+            "modalOptions":{
                 "autoOpen": true,
                 "clickableOverlay": true
             }

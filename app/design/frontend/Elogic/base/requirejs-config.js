@@ -3,13 +3,11 @@ var config = {
         'js/theme'
     ],
     paths: {
-        slick: 'js/slick',
-        'elogicCoarousel': 'Elogic_CatalogWidget/js/carousels',
-        'elogicFirstSlider': 'js/firstDisplaySlider',
-        'elogicTripleSlider': 'js/triple-slider',
-        'elogicNewsBlogSlider': 'js/news-blog-slider',
-        'elogicBrandsSlider': 'js/brands-slider',
-        'elogicModalSubscription': 'js/modal-subscription'
+        slick: 'Elogic_Slider/js/slick',
+        'elogicSlider': 'js/elogic-slider',
+        'elogicModalSubscription': 'js/modal-subscription',
+        'elogicLanguageSlide': 'js/language-slide',
+        'elogicAccordion': 'js/accordion'
     },
     shim: {
         slick: {

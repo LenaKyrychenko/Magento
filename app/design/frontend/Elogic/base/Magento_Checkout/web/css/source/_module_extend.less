@@ -14,9 +14,10 @@
     //  ---------------------------------------------
 
     .minicart-wrapper {
-        right: 85px;
-        bottom: 49px;
-        position: absolute;
+        order: 3;
+        margin-left: 13px;
+        height: 29px;
+        margin-top: -10px;
 
         .action.showcart {
             letter-spacing: 1px;
@@ -30,5 +31,31 @@
         }
     }
 
+}
 
+//
+//  Tablet
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
+    .minicart-wrapper {
+        margin-top: -9px;
+    }
+
+    .minicart-wrapper {
+
+        .action.showcart {
+            margin-top: 4px;
+            padding-right: 8px;
+            .lib-icon-font(
+                @_icon-font-content: @icon-cart,
+                @_icon-font: @font-family-awesome,
+                @_icon-font-size: 15px
+            );
+
+            &:before {
+                .lib-css(font-weight, @font-weight__light);
+            }
+        }
+    }
 }

@@ -4,6 +4,26 @@
 
 & when (@media-common = true) {
 
+    .subscribe-modal-container {
+        .block.newsletter {
+            position: absolute;
+            left: 50%;
+            .lib-vendor-prefix-display();
+            .lib-vendor-box-align(center);
+            height: 100%;
+            top: 0;
+            margin-top: 4%;
+
+            .field.newsletter {
+                height: 2.17vw;
+                max-height: 40px;
+                max-width: 410px;
+                width: 22.4vw;
+                min-width: 296px;
+            }
+        }
+    }
+
     .block.newsletter {
 
         .field{
@@ -16,22 +36,31 @@
 
         input {
             height: 49px;
-            background: @color-elogic-grey2;
+            .lib-css(background, @color-elogic-grey2);
             padding: 0 0 0 20px;
             border: 1px @color-elogic-grey3 solid;
             &::placeholder{
-                color: @color-elogic-grey1;
+                .lib-css(color, @color-elogic-grey1);
                 .lib-css(font-weight, @font-weight__regular);
             }
         }
 
         .action.subscribe {
             height: 49px;
-            width: 152px;
+            border-radius: 0;
+            margin-left: 3px;
+            border: none;
+            letter-spacing: 1px;
+            .lib-css(font-weight, @font-weight__regular);
+            text-transform: uppercase;
+
+            &:hover{
+                .lib-css(background, @color-elogic-black3);
+            }
         }
 
         .action.primary{
-            background: @color-elogic-black2;
+            .lib-css(background, @color-elogic-black2);
         }
     }
 }
@@ -44,23 +73,19 @@
 
     .block.newsletter {
 
+        width: max-content;
+        //margin-left: 2%;
+
         .field {
             &.newsletter {
-                max-width: 311px;
+                max-width: 20.65vw;
+                min-width: 180px;
             }
         }
 
         .action.subscribe {
-            border-radius: 0;
-            margin-left: 3px;
-            border: none;
-            letter-spacing: 1px;
-            .lib-css(font-weight, @font-weight__regular);
-            text-transform: uppercase;
-
-            &:hover{
-                background: @color-elogic-black3;
-            }
+            width: 9vw;
+            min-width: 106px;
         }
     }
 
@@ -93,6 +118,112 @@
                 height: 41px;
                 width: 123px;
                 margin-top: 30px;
+            }
+        }
+    }
+}
+
+//
+//  Tablet
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
+
+    .subscribe-modal-container{
+        .block.newsletter{
+            max-width: 49%;
+            margin-top: 8%;
+
+            .field {
+                &.newsletter {
+                    max-width: 410px;
+                    min-width: 200px;
+                }
+            }
+
+            .form.subscribe{
+                display: flex;
+                flex-direction: column;
+                width: max-content;
+            }
+
+            .action.subscribe {
+                margin-left: 0;
+            }
+
+            input {
+                height: 30px;
+            }
+
+            .action.subscribe {
+                height: 31px;
+                width: 123px;
+                margin-top: 20px;
+            }
+        }
+    }
+}
+
+//
+//  Mobile 640
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__s) {
+    .subscribe-modal-container{
+        .block.newsletter{
+
+            .field {
+                &.newsletter {
+                    min-width: 150px;
+                }
+            }
+
+            input {
+                height: 23px;
+                padding-left: 20px;
+            }
+
+            .action.subscribe {
+                height: 27px;
+                margin-top: 15px;
+                width: 89px;
+
+                span {
+                    .lib-font-size(10);
+                }
+            }
+        }
+    }
+}
+
+//
+//  Mobile L 480
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__xs) {
+    .subscribe-modal-container{
+        .block.newsletter{
+
+            .field {
+                &.newsletter {
+                    min-width: 114px;
+                }
+            }
+
+            input {
+                height: 15px;
+                padding-left: 1px;
+            }
+
+            .action.subscribe {
+                margin-top: 15px;
+                height: 15px;
+                width: 55px;
+                padding: 0;
+
+                span {
+                    .lib-font-size(7);
+                }
             }
         }
     }
