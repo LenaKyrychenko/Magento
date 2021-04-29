@@ -1,0 +1,134 @@
+//
+//  Common
+//  _____________________________________________
+
+& when (@media-common = true) {
+    .arrow-down {
+        .lib-icon-font(
+            @_icon-font-content: @icon-menu-arrow-down,
+            @_icon-font: @font-family-awesome,
+            @_icon-font-size: 22px,
+            @_icon-font-color: @color-elogic-grey1
+        );
+    }
+
+    .ui-selectmenu-menu.ui-front {
+        ul {
+            min-width: max-content;
+            position: absolute;
+            list-style: none;
+            padding: 0;
+            .lib-css(background, @color-elogic-white1);
+            transition: all .4s ease;
+            box-shadow: 4px 4px 24px 0 rgba(34, 60, 80, 0.2);
+            text-align: center;
+
+            li {
+                padding: 10px 20px 10px 20px;
+                transition: all .4s ease;
+                .lib-css(color, @color-elogic-grey1);
+                margin: 0;
+
+                &:hover,
+                &:focus {
+                    .lib-css(color, @color-elogic-white1);
+                    .lib-css(background-color, @color-elogic-grey5);
+                }
+            }
+
+            .ui-state-focus {
+                .lib-css(color, @color-elogic-white1);
+                .lib-css(background-color, @color-elogic-grey5);
+            }
+        }
+    }
+
+    .ui-selectmenu-menu {
+        width: max-content;
+        .ui-menu {
+            opacity: 0;
+        }
+    }
+
+    .ui-selectmenu-open {
+        .ui-menu {
+            opacity: 1;
+            z-index: 999;
+        }
+    }
+
+    .ui-selectmenu-button {
+        .lib-vendor-prefix-display();
+        .lib-vendor-box-align(center);
+        .lib-vendor-prefix-flex-direction(row-reverse);
+        cursor: pointer;
+    }
+
+    .category-bottom-toolbar{
+        #limiter {
+            display: none;
+        }
+
+        .toolbar {
+            .limiter {
+                display: block;
+                position: absolute;
+                right: 0;
+
+                .label,
+                .limiter-text {
+                    display: none;
+                }
+            }
+
+            .toolbar-sorter {
+                display: none;
+            }
+        }
+
+        .ui-selectmenu-button {
+            max-width: 33px;
+            justify-content: space-between;
+        }
+
+        .ui-selectmenu-text {
+            .lib-css(font-weight, @font-weight__light);
+            .lib-css(color, @color-elogic-grey1);
+        }
+    }
+
+    .category-top-toolbar{
+        #sorter {
+            display: none;
+        }
+
+        .toolbar {
+            .limiter,
+            .sorter-action {
+                display: none;
+            }
+
+            .toolbar-sorter{
+                .lib-vendor-prefix-display();
+                .lib-vendor-box-align(center);
+                justify-content: space-between;
+
+                .sorter-label {
+                    margin-right: 8px;
+                    .lib-css(color, @color-elogic-grey1);
+                    .lib-css(font-weight, @font-weight__light);
+                }
+
+                .ui-selectmenu-text {
+                    display: none;
+                }
+            }
+        }
+
+        .ui-selectmenu-button {
+            max-width: max-content;
+            min-width: max-content;
+        }
+    }
+
+}
