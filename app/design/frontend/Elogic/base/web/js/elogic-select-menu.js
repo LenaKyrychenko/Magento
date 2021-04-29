@@ -8,7 +8,7 @@ define([
         options:{
             template:"",
             selectMenuOptions:{
-                icons: { button: "ui-icon-caret-1-s" },
+                icons: { button: "arrow-down" },
                 position: { my : "left-100" },
                 change: function( event, ui ) {
                     $(this).trigger('change');
