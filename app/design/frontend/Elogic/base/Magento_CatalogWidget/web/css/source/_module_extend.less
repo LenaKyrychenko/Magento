@@ -23,7 +23,6 @@
                     @_icon-font-color: @color-elogic-black2,
                     @_icon-font-size: 16px,
                     @_icon-font-color-hover: @color-elogic-grey1
-                    //@_icon-font-display:
                 );
 
                 &:before{
@@ -58,11 +57,11 @@
         .product-image-wrapper {
             width: 308px;
             height: 382.11px;
-            padding-bottom: 0px !important;
+            padding-bottom: 0 !important;
         }
 
         .product-image-photo {
-            margin: 0px;
+            margin: 0;
             width: 308px;
             transition: all .4s ease 0s;
             opacity: 1;
@@ -71,7 +70,7 @@
         .product-item-name {
             .product-item-link {
                 text-transform: uppercase;
-                color: @color-elogic-grey1;
+                .lib-css(color, @color-elogic-grey1);
                 .lib-font-size(14);
                 letter-spacing: 1px;
                 transition: all .4s ease 0s;
@@ -89,7 +88,7 @@
 
         .price-box .price {
             .lib-font-size(18);
-            font-family: @font-family-oswald;
+            .lib-css(font-family, @font-family-oswald);
             .lib-css(font-weight, @font-weight__bold);
         }
 
@@ -151,7 +150,7 @@
     .product-item-actions {
         .actions-secondary {
             .lib-vendor-prefix-display();
-            flex-direction: column;
+            .lib-vendor-prefix-flex-direction();
             .lib-css(background, @color-elogic-white1);
             width: 60px;
             height: 159px;
