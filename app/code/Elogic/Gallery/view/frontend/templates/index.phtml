@@ -1,0 +1,36 @@
+<script type="text/x-magento-init">
+{
+    "*":{
+        "elogicSlider":{
+            "template":".gallery",
+            "slickOptions":{
+                "dots": false,
+                "rows": 1,
+                "arrows": true,
+                "infinite": true,
+                "slidesToShow": 3,
+                "slidesToScroll": 1,
+                "variableWidth": false,
+                "centerMode": true,
+                "centerPadding": "60px",
+                "responsive": [
+                    {
+                        "breakpoint": 768,
+                        "settings":{
+                            "slidesToShow": 2,
+                            "slidesToScroll": 2
+                        }
+                    },
+                    {
+                        "breakpoint": 540,
+                        "settings":{
+                            "slidesToShow": 1,
+                            "slidesToScroll": 1
+                        }
+                    }
+                ]
+            }
+        }
+    }
+}
+</script>
