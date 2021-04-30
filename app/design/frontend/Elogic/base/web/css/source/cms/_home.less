@@ -95,12 +95,12 @@
             justify-content: space-between;
             .lib-vendor-box-align(center);
             width: 100%;
-            padding: 0px 6%;
+            padding: 0 6%;
         }
 
         .sale-text h2{
             letter-spacing: 0.5px;
-            padding-bottom: 0px;
+            padding-bottom: 0;
         }
 
         .sale-text p{
@@ -111,7 +111,7 @@
         }
 
         img {
-            min-width: 320px;
+            min-width: 290px;
         }
     }
 
@@ -213,17 +213,19 @@
             }
 
             .date-time {
+                .lib-vendor-prefix-display();
+
                 .lib-icon-font(
                     @_icon-font: @font-family-awesome,
-                    @_icon-font-content: @icon-calendar,
-                    @_icon-font-color: @color-elogic-grey1
+                    @_icon-font-content: @icon-blog-calendar,
+                    @_icon-font-color: @color-elogic-grey1,
+                    @_icon-font-display: flex
                 );
-                display: flex;
 
                 p {
                     .lib-font-size(13);
-                    color: @color-elogic-grey1;
-                    font-style: @font-style__emphasis;
+                    .lib-css(color, @color-elogic-grey1);
+                    .lib-css(font-style, @font-style__emphasis);
                     padding-top: 2px;
                     padding-left: 10px;
                 }
@@ -483,8 +485,12 @@
         flex-wrap: wrap;
     }
 
-    .triple-slider-item + div{
-        margin-left: 0;
+    .triple-slider-item {
+        margin-right: 29px;
+
+        &:last-child {
+            margin-right: 0;
+        }
     }
 
     .modal-popup._show .modal-inner-wrap{
