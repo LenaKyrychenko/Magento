@@ -25,10 +25,15 @@ define([
 
         _create: function (){
             var contact = $('.contact-us');
+            var language = $('.switcher-language');
+            var currency = $('.switcher-currency');
+
             this._initModal(this.element);
 
             $(".btn-open-language-slider").on('click',function(){
                 $(".language_slide_container").modal("openModal");
+                language.show();
+                currency.show();
                 contact.show();
             });
         },

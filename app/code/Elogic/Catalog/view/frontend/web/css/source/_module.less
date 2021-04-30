@@ -29,7 +29,6 @@
         display: block;
         height: auto;
         left: 0;
-        margin: auto;
         max-width: 100%;
         position: absolute;
         right: 0;
@@ -38,38 +37,5 @@
         transition: all .4s ease;
     }
 
-    .products-grid {
-        .products.products-with-hover {
-            .product-item {
-                &:not(:hover) {
-                    &:not(.active) {
-                        .product-item-photo {
-                            //display: block;
-                            opacity: 1;
-                        }
 
-                        .product-item-photo-hover {
-                            //display: none;
-                            opacity: 0;
-                        }
-                    }
-                }
-            }
-
-            .product-item-info {
-                &:hover,
-                &.active {
-                    .product-item-photo {
-                        //display: none;
-                        opacity: 0;
-                    }
-
-                    .product-item-photo-hover {
-                        //display: block;
-                        opacity: 1;
-                    }
-                }
-            }
-        }
-    }
 }
