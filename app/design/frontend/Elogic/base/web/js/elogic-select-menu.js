@@ -1,6 +1,6 @@
 define([
     'jquery',
-    'selectMenu'
+    'JQueryUi'
 ], function ($){
     'use strict';
 
