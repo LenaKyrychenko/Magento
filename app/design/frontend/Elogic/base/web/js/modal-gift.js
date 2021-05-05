@@ -45,4 +45,5 @@ define([
 
     })
     return $.mage.customgiftr;
+
 });

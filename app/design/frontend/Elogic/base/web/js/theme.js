@@ -22,6 +22,10 @@ define([
         $('.actions').show();
     });
 
+    $('body').on('click','.popup_custom_giftr .select-box',function () {
+        $('.popup_custom_giftr .select-box__list').toggleClass("list-open");
+        $('.popup_custom_giftr .select-box').toggleClass("rotate-arrow");
+    });
 
 });
 
