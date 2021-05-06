@@ -5,7 +5,7 @@
 & when (@media-common = true) {
 
     .giftr-list {
-        z-index: 200;
+        .lib-css(z-index, @z-index-2);
     }
 
     .registries {
@@ -61,9 +61,9 @@
         &:before {
             background: transparent;
             position: absolute;
-            right: 9px; //37px ;
-            top: 14px;//60px;
-            z-index: 100;
+            right: 9px;
+            top: 14px;
+            .lib-css(z-index, @z-index-1);
             width: 30px;
             text-align: center;
             cursor: pointer;
@@ -270,17 +270,6 @@
 //  Mobile (styles-m.css)
 //  _____________________________________________
 .media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
-    //.modal-slide .modal-inner-wrap{
-    //    height: max-content!important;
-    //    overflow-y: visible!important;
-    //}
-    //
-    //.popup_custom_giftr{
-    //    width: 100%!important;
-    //}
-    //.modal-popup{
-    //    left: 0!important;
-    //}
 
     .modal-popup.popup_custom_giftr {
         &.modal-slide {
