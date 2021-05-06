@@ -1,0 +1,337 @@
+//
+//  Common
+//  _____________________________________________
+
+& when (@media-common = true) {
+
+    .giftr-list {
+        .lib-css(z-index, @z-index-2);
+    }
+
+    .registries {
+        .select {
+            .items-selections {
+                .lib-css(border, 1px solid @color-gray62);
+            }
+        }
+    }
+
+    .popup_custom_giftr {
+        .lib-vendor-prefix-display();
+        &:before {
+            display: none;
+        }
+        position: fixed;
+        align-content: center;
+        justify-content: center;
+        width: 425px;
+        border: 0;
+        .lib-vendor-box-align(center);
+        left: 34vw;
+        min-width: 230px;
+
+        &._show {
+            .modal-inner-wrap {
+                width: 425px;
+                min-width: max-content;
+            }
+        }
+    }
+
+    .select-box {
+        position: relative;
+        display: block;
+        .lib-css(width, @table__width);
+        margin: 0 auto;
+        .lib-css(font-family, @font-family-name__base);
+        .lib-font-size(18px);
+        .lib-css(color, @color-elogic-grey5);
+
+        .lib-icon-font(
+            @_icon-font-content:'\e607',
+            @_icon-font: @icon-font,
+            @_icon-font-size: 20px,
+            @_icon-font-line-height: @indent__m,
+            @_icon-font-vertical-align: @icon-font__vertical-align,
+            @_icon-font-position: @icon-font__position,
+            @_icon-font-text-hide: @icon-font__text-hide,
+            @_icon-font-display: @icon-font__display
+        );
+
+        &:before {
+            background: transparent;
+            position: absolute;
+            right: 9px;
+            top: 14px;
+            .lib-css(z-index, @z-index-1);
+            width: 30px;
+            text-align: center;
+            cursor: pointer;
+            transition: all .4s ease;
+        }
+
+        &.rotate-arrow {
+            &:before {
+                transform: rotate(180deg);
+                transform-origin: center;
+            }
+        }
+    }
+
+    .ui-dialog-content {
+        .lib-css(background, @color-elogic-white1);
+        .lib-css(width, @table__width);
+        padding: 1%;
+    }
+
+    .add-to-giftr div {
+        .giftr-dropdown {
+            label {
+                padding-top: 1px;
+                border-bottom: 0;
+            }
+        }
+    }
+
+    .add-to-giftr div.giftr-dropdown {
+        opacity: 1;
+    }
+
+    .select-gift {
+        .lib-css(color, @color-elogic-black1);
+        .lib-css(font-weight, @font-weight__semibold);
+        .lib-font-size(15px);
+    }
+
+    #confirm-add-to-registry {
+        .lib-css(background-color, @color-elogic-black2);
+        .lib-css(color, @color-elogic-white1);
+        .lib-css(width, @table__width);
+        margin-top: 5%;
+        text-transform: uppercase;
+        padding: 4%;
+        box-shadow: none;
+        border-radius: 4px;
+    }
+
+    .ui-dialog.ui-widget.ui-widget-content.ui-corner-all.ui-front.giftr-dropdown {
+        .lib-vendor-prefix-display();
+
+        &:before {
+            display: none;
+        }
+
+        .lib-css(background-color, @color-elogic-white1);
+        top: 40%;
+        position: fixed;
+        align-content: center;
+        justify-content: center;
+        border-radius: 0;
+        width: 20%;
+        height: max-content;
+        border: 0;
+        .lib-vendor-box-align(center);
+        left: 40%;
+        min-width: 230px;
+    }
+
+    .select-box__current {
+        position: relative;
+        .lib-css(border, 1px solid @color-gray62);
+        cursor: pointer;
+        outline: none;
+        border-radius: 4px;
+    }
+
+    .select-box__list.list-open {
+        opacity: 1;
+        -webkit-animation-name: none;
+        animation-name: none;
+        .lib-css(border, 1px solid @color-gray62);
+        .lib-css(background, @color-elogic-white1);
+    }
+
+    .select-box__current:focus + .select-box__list .select-box__option {
+        cursor: pointer;
+    }
+
+    .select-box__value {
+        display: -webkit-box;
+        .lib-vendor-prefix-display();
+    }
+
+    .select-box__input {
+        display: none;
+    }
+
+    .select-box__input:checked + .select-box__input-text {
+        display: block;
+    }
+
+    .select-box__input-text {
+        display: none;
+        width: 98%;
+        padding: 9px;
+        .lib-css(background, @color-elogic-white1);
+        margin: 0 auto;
+    }
+
+    .add-to-giftr div.giftr-dropdown label:last-child {
+        padding: 4% !important;
+    }
+
+    .select-box__list {
+        position: absolute;
+        .lib-css(width, @table__width);
+        .lib-list-reset-styles();
+        opacity: 0;
+        -webkit-animation-name: HideList;
+        animation-name: HideList;
+        -webkit-animation-duration: 0.5s;
+        animation-duration: 0.5s;
+        -webkit-animation-delay: 0.5s;
+        animation-delay: 0.5s;
+        -webkit-animation-fill-mode: forwards;
+        animation-fill-mode: forwards;
+        -webkit-animation-timing-function: step-start;
+        animation-timing-function: step-start;
+        box-shadow: 0 15px 30px -10px rgba(0, 0, 0, 0.1);
+        .lib-css(border, 1px solid @color-gray62);
+        .lib-css(background, @color-elogic-white1);
+
+        li {
+            margin: 0;
+        }
+    }
+
+    #registry-popup-message {
+        position: absolute;
+        top: 25%;
+        left: 5%;
+    }
+
+    .select-box__option {
+        display: block;
+        padding: 15px;
+        .lib-css(background, @color-elogic-white1);
+    }
+
+    .select-box__option:hover, .select-box__option:focus {
+        .lib-css(color, @color-elogic-white1);
+        .lib-css(background-color, @color-elogic-black2);
+    }
+
+    .select-box__current {
+        height: 46px;
+    }
+
+    @-webkit-keyframes HideList {
+        from {
+            -webkit-transform: scaleY(1);
+            transform: scaleY(1);
+        }
+        to {
+            -webkit-transform: scaleY(0);
+            transform: scaleY(0);
+        }
+    }
+
+    @keyframes HideList {
+        from {
+            -webkit-transform: scaleY(1);
+            transform: scaleY(1);
+        }
+        to {
+            -webkit-transform: scaleY(0);
+            transform: scaleY(0);
+        }
+    }
+
+}
+
+//
+//  Desktop
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+    .popup_custom_giftr {
+        &._show {
+            .modal-inner-wrap {
+                width: 425px;
+                min-width: max-content;
+            }
+        }
+    }
+}
+
+
+
+//
+//  Mobile (styles-m.css)
+//  _____________________________________________
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
+
+    .modal-popup.popup_custom_giftr {
+        &.modal-slide {
+            width: 410px;
+            left: 22vw;
+            height: 270px;
+        }
+
+        &._show {
+            .modal-inner-wrap {
+                width: 53vw;
+                height: 190px;
+            }
+        }
+    }
+}
+
+//
+//  Mobile 640
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__s) {
+    .modal-popup.popup_custom_giftr {
+        &.modal-slide {
+            width: 370px;
+            left: 15vw;
+            height: 270px;
+        }
+
+        &._show {
+            .modal-inner-wrap {
+                width: 370px;
+                height: 190px;
+                min-width: 300px;
+            }
+        }
+    }
+}
+
+//
+//  Mobile L 480
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__xs) {
+    .modal-popup.popup_custom_giftr {
+        &.modal-slide {
+            width: 71vw;
+            left: 12vw;
+            height: 270px;
+        }
+
+        &._show {
+            .modal-inner-wrap {
+                width: 71vw;
+                height: 190px;
+                min-width: 200px;
+            }
+        }
+
+        #registry-popup-message {
+            font-size: 4vw;
+        }
+    }
+}
+
