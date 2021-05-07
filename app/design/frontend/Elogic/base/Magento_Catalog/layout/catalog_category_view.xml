@@ -21,7 +21,7 @@
             </block>
         </referenceContainer>
 
-        <move element="breadcrumbs" destination="columns.top" after="category.view.container"/>
+        <move element="breadcrumbs" destination="category.view.container" after="category.image"/>
 
     </body>
 </page>
