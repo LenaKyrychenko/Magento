@@ -11,5 +11,17 @@
             <block class="Magento\Framework\View\Element\Template" name="sort.menu" template="Magento_Catalog::SortMenu.phtml"/>
             <block class="Magento\Framework\View\Element\Template" name="field.limiter" template="Magento_Catalog::fieldLimiter.phtml"/>
         </referenceContainer>
+
+        <referenceContainer name="sidebar.main">
+            <block class="Magento\Framework\View\Element\Template" name="left.category.slider" template="Magento_Catalog::categoryLeftSlider.phtml"/>
+            <block class="Magento\Cms\Block\Block" name="category.left.slider" after="-">
+                <arguments>
+                    <argument name="block_id" xsi:type="string">category_left_slider</argument>
+                </arguments>
+            </block>
+        </referenceContainer>
+
+        <move element="breadcrumbs" destination="columns.top" after="category.view.container"/>
+
     </body>
 </page>
