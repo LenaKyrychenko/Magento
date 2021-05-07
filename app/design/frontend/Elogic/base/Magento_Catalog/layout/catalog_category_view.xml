@@ -11,5 +11,7 @@
             <block class="Magento\Framework\View\Element\Template" name="sort.menu" template="Magento_Catalog::SortMenu.phtml"/>
             <block class="Magento\Framework\View\Element\Template" name="field.limiter" template="Magento_Catalog::fieldLimiter.phtml"/>
         </referenceContainer>
+
+        <move element="breadcrumbs" destination="category.view.container" after="category.image"/>
     </body>
 </page>
