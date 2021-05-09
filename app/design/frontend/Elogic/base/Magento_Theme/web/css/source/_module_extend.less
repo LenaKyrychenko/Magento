@@ -16,6 +16,13 @@
 
         li {
             margin-left: 20px;
+
+            a{
+                &:active {
+                    .lib-css(color, @color-elogic-grey1);
+                    text-decoration: none;
+                }
+            }
         }
     }
 
