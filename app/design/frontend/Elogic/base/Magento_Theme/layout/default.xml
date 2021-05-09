@@ -12,6 +12,8 @@
        <referenceBlock name="header.panel.wrapper" remove="true"/>
        <referenceBlock name="my-account-link" remove="true" />
 
+       <referenceBlock name="giftr-top-link" remove="true" />
+
        <container name="language.slide.container" label="Language Slide Container" htmlTag="div" htmlClass="language_slide_container">
            <block class="Magento\Framework\View\Element\Template" name="language.slide" template="Magento_Theme::languageSlide.phtml"/>
            <block class="Magento\Cms\Block\Block" name="contact.us.block" after="-">
