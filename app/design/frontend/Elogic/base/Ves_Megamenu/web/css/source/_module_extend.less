@@ -12,13 +12,48 @@
             background: none;
             top: -27px;
             left: 250px;
+
+            li.active>a {
+                background: none;
+                .lib-css(color, @color-elogic-black2) !important;
+            }
+
+            li.level0 > a {
+                .lib-css(font-weight, @font-weight__regular);
+            }
         }
 
         .ves-megamenu {
             .arm-chair-menu {
                 .dropdown-menu .content-wrap {
+                    .lib-vendor-prefix-display();
+                    .lib-vendor-prefix-flex-wrap();
+                    justify-content: space-between;
+                    margin-top: 137px;
+
                     .megamenu-sidebar {
-                        float: right;
+                        float: none;
+                        width: max-content;
+                        max-height: max-content;
+                    }
+
+                    .megamenu-content {
+                        float: none;
+                        max-width: max-content;
+                    }
+
+                    .level1 .item-content2 {
+                        &:not(.level2 .item-content2) {
+                            .lib-vendor-prefix-display();
+                        }
+                    }
+                }
+
+                .dropdown-mega .content-wrap {
+                    margin-top: 0;
+
+                    .nav-anchor {
+                        padding: 0 0 20px 20px;
                     }
                 }
             }
@@ -97,7 +132,6 @@
                 span {
                     transition: all .4s ease 0s;
                 }
-
             }
 
             &:hover > a {
@@ -114,7 +148,6 @@
             &:hover{
                 .dropdown-menu {
                     left: 20px;
-                    top: 100px;
                 }
             }
         }
@@ -128,7 +161,7 @@
 
             &:hover {
                 .dropdown-menu {
-                    padding: 15px 0px 0px 0px;
+                    padding: 15px 0 0 0;
                     left: 0;
                 }
             }
@@ -163,8 +196,8 @@
             justify-content: center;
 
             &:before{
-                margin-left: 0px;
-                margin-top: 0px;
+                margin-left: 0;
+                margin-top: 0;
             }
         }
     }
@@ -173,7 +206,6 @@
         position: relative;
         justify-content: space-between;
         flex-wrap: wrap;
-        width: max-content;
     }
 
     .navigation {
@@ -224,16 +256,6 @@
                     &:hover {
                         text-decoration: @color-elogic-white1 underline;
                     }
-                }
-            }
-        }
-    }
-
-    .ves-megamenu {
-        .arm-chair-menu {
-            &:hover {
-                .dropdown-menu {
-                    left: -340px;
                 }
             }
         }
@@ -292,7 +314,6 @@
                 margin-top: 12px;
                 .lib-css(font-weight, @font-weight__heavy);
             }
-
         }
 
         .info{
@@ -316,23 +337,12 @@
         }
     }
 
-    .navigation {
-        .arm-chair-menu {
-            .submenu a {
-                padding: 0 30px 8px 20px;
-            }
-        }
-    }
-
     .section-item-content {
         .ves-menu {
             .navigation {
                 .arm-chair-menu {
                     .level1 {
                         .subitems-group {
-                            padding-bottom: 30px;
-                            padding-top: 30px;
-
                             span{
                                 .lib-css(font-weight, @font-weight__semibold);
                             }
@@ -345,7 +355,8 @@
 
     .armchair-menu-images{
         .lib-vendor-prefix-display();
-        margin-top: -210px;
+        justify-content: space-between;
+        width: max-content;
 
         div{
             margin-right: 60px;
@@ -355,22 +366,13 @@
     .arm-chair-menu {
         .megamenu-footer {
             border-top: 1px solid rgba(186, 147, 62, .3);
-        }
-    }
-
-    .arm-chair-menu{
-        .nav-item{
-            .submenu-left {
-                .dropdown-submenu {
-                    width: 195px;
-                }
-            }
+            width: 100%;
         }
     }
 
     .arm-chair-menu{
         .nav-item.submenu-left.dropdown-submenu {
-            width: 195px;
+            width: 190px;
         }
     }
 
