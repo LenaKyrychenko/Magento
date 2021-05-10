@@ -1,0 +1,44 @@
+//
+//  Common
+//  _____________________________________________
+
+& when (@media-common = true) {
+    .catalog-category-view {
+        .catalog-subcategories-container .sucategegories-wrapper {
+            .lib-vendor-prefix-display();
+            padding-bottom: 20px;
+
+            li {
+                list-style: none;
+                text-align: center;
+                border: 1px rgba(0, 0, 0, 0.3) solid;
+                padding: 15px 10px;
+                margin-right: 20px;
+                box-shadow: 4px 4px 8px 0 rgba(34, 60, 80, 0.2);
+                transition: all .4s ease;
+
+                &:hover {
+                    box-shadow: none;
+                }
+            }
+
+            li .info {
+
+                .lib-vendor-prefix-display();
+                .lib-vendor-prefix-flex-direction();
+
+                img {
+                    width: 100px;
+                }
+
+                a {
+                    transition: all .4s ease;
+                    padding-top: 10px;
+                    &:hover {
+                        .lib-css(color, @color-elogic-grey1);
+                    }
+                }
+            }
+        }
+    }
+}
